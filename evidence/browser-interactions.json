@@ -1,0 +1,135 @@
+{
+  "snapshot_date": "2026-09-22",
+  "evidence_type": "manual_browser_observation",
+  "observation_source": "Recording operator observations supplied during the live filming session.",
+  "scope": "Bounded interaction and state-retention observations. These are not automated browser tests, a complete accessibility audit, or a blind design-quality evaluation.",
+  "data_context": "All named customers, stays, tasks and products are synthetic demo fixtures. Replies and forms act locally only.",
+  "apps": [
+    {
+      "app": "stays",
+      "mode_observed": "jev",
+      "status": "PASS",
+      "observed_actions": [
+        "Saved The Stillwater House.",
+        "Selected The Stillwater House and Pine & Timber for comparison.",
+        "Changed the interface to a dark theme with a sidebar layout.",
+        "Viewed the mobile layout."
+      ],
+      "observed_results": [
+        "Saved stay and the two selected comparisons remained after the design revision."
+      ],
+      "limits": [
+        "Mobile was viewed; no complete viewport matrix, keyboard audit or accessibility score was performed."
+      ]
+    },
+    {
+      "app": "analytics",
+      "mode_observed": "jev",
+      "status": "PASS",
+      "observed_actions": [
+        "Selected the 7-day period.",
+        "Observed the Customers KPI at 767.",
+        "Filtered transactions to Organic.",
+        "Changed the design to a midnight theme."
+      ],
+      "observed_results": [
+        "Organic filter showed 2 transactions totaling $178.",
+        "Period and filter state remained after the design revision."
+      ],
+      "limits": [
+        "These fixture values and one filter path were checked manually; all calculations and filter combinations were not exhaustively tested."
+      ]
+    },
+    {
+      "app": "shop",
+      "mode_observed": "jev",
+      "status": "PASS",
+      "observed_actions": [
+        "Selected the Sound category.",
+        "Added two headphones and one speaker to the cart.",
+        "Changed the design to paper theme with a grid layout."
+      ],
+      "observed_results": [
+        "The cart showed quantity 3 and total $527.",
+        "Cart contents, quantity and total remained after the design revision."
+      ],
+      "limits": [
+        "Local synthetic cart only; no purchase or payment was made."
+      ]
+    },
+    {
+      "app": "board",
+      "mode_observed": "laya+llm",
+      "status": "PARTIAL_PASS",
+      "observed_actions": [
+        "Moved ORB25 to Done.",
+        "Created ORB32 with title Ship the live frontend demo.",
+        "Selected the Engineering filter.",
+        "Requested a design revision."
+      ],
+      "observed_results": [
+        "Task updates, the new task and Engineering filter remained.",
+        "The refinement returned HTTP 429.",
+        "The prior valid specification remained visible after the failed refinement."
+      ],
+      "interaction_status": "PASS",
+      "state_preservation_on_failure": "PASS",
+      "refinement_status": "FAIL",
+      "failure": "HTTP 429 from the fixed LLM provider; no automatic retry or fallback.",
+      "limits": [
+        "This observation does not establish a successful board refinement."
+      ]
+    },
+    {
+      "app": "inbox",
+      "mode_observed": "jev+llm",
+      "status": "PASS",
+      "observed_actions": [
+        "Selected the synthetic Taylor Park conversation.",
+        "Saved a literal local reply.",
+        "Resolved the conversation.",
+        "Requested a design revision."
+      ],
+      "observed_results": [
+        "All four revision paths completed successfully.",
+        "Taylor Park remained selected.",
+        "The Reopen action and saved reply remained visible after revision."
+      ],
+      "limits": [
+        "Reply content is omitted from this evidence file. No external message was sent. Only the Jev+LLM interaction state was manually checked."
+      ]
+    },
+    {
+      "app": "landing",
+      "mode_observed": "laya+llm",
+      "status": "PASS",
+      "observed_actions": [
+        "Selected the Ship tab.",
+        "Selected Monthly pricing and observed Together at $15 and Studio at $30.",
+        "Expanded the Can design change FAQ.",
+        "Created a workspace locally.",
+        "Requested a design revision.",
+        "Viewed the FAQ and workspace at a 390-pixel mobile width."
+      ],
+      "observed_results": [
+        "All four initial and revision paths returned LIVE results.",
+        "Ship and Monthly remained selected after revision, including their aria-pressed state.",
+        "The Welcome heading and expanded FAQ remained after revision.",
+        "The mobile FAQ and workspace were visually inspected and appeared correctly arranged."
+      ],
+      "limits": [
+        "The workspace operation was local only. Its input text is omitted from this evidence file.",
+        "Only this mobile view was inspected; no complete responsive or cross-browser matrix was run."
+      ]
+    }
+  ],
+  "automated_browser_test_status": "NOT_RUN",
+  "full_responsive_matrix_status": "NOT_RUN",
+  "blind_design_quality_status": "NOT_RUN",
+  "observation_collection_status": "COMPLETE_FOR_SIX_BOUNDED_APP_PATHS",
+  "responsive_observation_scope": {
+    "stays": "Mobile view inspected; exact viewport matrix not established.",
+    "landing": "FAQ and workspace visually inspected at 390-pixel width.",
+    "other_apps": "No complete mobile inspection claim."
+  }
+}

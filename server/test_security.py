@@ -5,6 +5,8 @@ import json
 import os
 import tempfile
 import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -100,6 +102,70 @@ class AuditTrailTests(unittest.TestCase):
             text=next(Path(tmp).glob('*.json')).read_text();record=json.loads(text)
             self.assertEqual(record['rejected_response']['usage']['cost'],0.001)
             self.assertNotIn('secret-value-123',text)
+
+class LLMQueueTests(unittest.TestCase):
+    def test_concurrent_refinements_are_serialized_and_wait_is_reported(self):
+        from server.providers import Providers, LLM_MODEL
+        first_entered=threading.Event()
+        release_first=threading.Event()
+        second_waiting=threading.Event()
+        guard=threading.Lock()
+        state={'active':0,'peak':0,'calls':0,'lock_attempts':0}
+        real_lock=threading.Lock()
+        class ObservableLock:
+            # Delegate to a real lock; only observe when the second thread queues.
+            def acquire(self, timeout):
+                with guard:
+                    state['lock_attempts']+=1
+                    if state['lock_attempts']==2: second_waiting.set()
+                return real_lock.acquire(timeout=timeout)
+            def release(self): real_lock.release()
+        def fake_post(url,payload,key,timeout):
+            with guard:
+                state['calls']+=1;number=state['calls']
+                state['active']+=1;state['peak']=max(state['peak'],state['active'])
+            if number==1:
+                first_entered.set()
+                if not release_first.wait(2): raise AssertionError('Test did not release first request')
+            with guard:state['active']-=1
+            return {'model':LLM_MODEL,'choices':[{'finish_reason':'stop','message':{'content':json.dumps(SPEC)}}],'usage':{'cost':0}}
+        with tempfile.TemporaryDirectory() as tmp, patch('server.providers.load_external_env'), patch.object(Providers,'llm_key',return_value='fake-key'), patch('server.providers._LLM_REQUEST_LOCK',ObservableLock()), patch('server.providers.post_json',side_effect=fake_post):
+            # Different Providers instances must still share one process-wide queue.
+            labs=[Lab(Providers(),Path(tmp)/str(i)) for i in range(2)]
+            plan={'run_id':'known','provider':'jev','spec':SPEC}
+            for lab in labs:lab.records['known']={'status':'complete','kind':'plan','result':plan,'request':{'app':'stays','prompt':'dark'}}
+            body={'app':'stays','prompt':'dark','plan':plan}
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                first=pool.submit(labs[0].run,body,True)
+                self.assertTrue(first_entered.wait(1))
+                second=pool.submit(labs[1].run,body,True)
+                try:
+                    self.assertTrue(second_waiting.wait(1))
+                    self.assertEqual(state['calls'],1)
+                    time.sleep(0.03)
+                finally:release_first.set()
+                first.result(timeout=2);result=second.result(timeout=2)
+            self.assertEqual(state['calls'],2)
+            self.assertEqual(state['peak'],1)
+            transport=result['raw']['local_transport']
+            self.assertGreaterEqual(transport['queue_ms'],20)
+            self.assertGreaterEqual(result['elapsed_ms'],transport['queue_ms'])
+            self.assertGreaterEqual(result['stages'][0]['elapsed_ms'],transport['queue_ms'])
+
+    def test_provider_failure_releases_queue_without_retry_or_fallback(self):
+        from server.providers import Providers, ProviderError, LLM_MODEL, LLM_PROVIDER
+        valid={'model':LLM_MODEL,'choices':[{'finish_reason':'stop','message':{'content':json.dumps(SPEC)}}]}
+        with patch('server.providers.load_external_env'), patch.object(Providers,'llm_key',return_value='fake-key'), patch('server.providers.post_json',side_effect=[ProviderError('Provider HTTP 429; no automatic retry'),valid]) as post:
+            providers=Providers();body={'app':'stays','prompt':'dark'};plan={'spec':SPEC}
+            with self.assertRaises(ProviderError) as error:providers.refine(body,plan)
+            self.assertEqual(post.call_count,1)
+            self.assertTrue(error.exception.raw['local_transport']['provider_request_started'])
+            result,raw=providers.refine(body,plan)
+            self.assertEqual(result,SPEC)
+            self.assertEqual(post.call_count,2)
+            for call in post.call_args_list:
+                self.assertEqual(call.args[1]['provider']['only'],[LLM_PROVIDER])
+                self.assertFalse(call.args[1]['provider']['allow_fallbacks'])
 
 class FakeProviders:
     def health(self): return {'test':True}

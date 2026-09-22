@@ -76,3 +76,34 @@ The script verifies the original prompt hash and 24 unique result slots, then wr
 - The scoring rubric was defined after observing the run. The complete expected mapping and all case-level mismatches are exposed for review.
 - No human aesthetic assessment or browser interaction test was performed as part of this batch or this analysis. Both remain **NOT_RUN for this evidence**. Separate browser or filming evidence must be identified independently.
 - There is no LLM-only control. The data cannot show that adding Jev or Laya improves an LLM-only pipeline.
+
+<!-- filming-summary:start -->
+## Filming run linkage
+
+[Filming summary](filming-summary.json) links the six capture windows to real server run IDs. [Offline script](summarize_filming.py) publishes metadata only; it does not make API calls, replay video or verify browser pixels. Only same-app requests started inside each capture window are included; off-camera API calls outside those windows are excluded. Raw requests, replies, provider responses and private paths are omitted.
+
+The nominal counts are **60 logical server records**, comprising 12 initial shared plans + 12 initial refinements + 24 independent revision plans + 12 revision refinements. Those produce **48 nominal result slots**: four initial and four revised modes per app. A plan record contains two typed-decision stages, so server-record counts are not individual model invocation counts.
+
+Observed: **60 unique server records**; record statuses `{"complete": 58, "failed": 2}`. Derived slot statuses: `{"FAIL": 2, "PASS": 46}`. Failures remain included.
+
+| Capture / app | Server records | Initial API slots PASS | Revision API slots PASS | Retained failures |
+| --- | ---: | ---: | ---: | --- |
+| 01 / stays | 10 | 3/4 | 4/4 | initial jev+llm HTTP 429 |
+| 02 / analytics | 10 | 4/4 | 4/4 | No recorded model failure |
+| 03 / shop | 10 | 4/4 | 4/4 | No recorded model failure |
+| 04 / board | 10 | 4/4 | 3/4 | revision laya+llm HTTP 429 |
+| 05 / inbox | 10 | 4/4 | 4/4 | No recorded model failure |
+| 06 / landing | 10 | 4/4 | 4/4 | No recorded model failure |
+
+**Protocol boundary:** clips 01–04 were filmed before LLM request serialization; clips 05–06 were filmed after it. The operator's `protocol-v2.json` records the transition at `2026-09-22T13:02:55.740423+00:00`; its hash and safe metadata are included in the summary. Do not pool these filming timings as a performance benchmark or compare them as if request concurrency were fixed. The earlier six-app API smoke snapshot remains unchanged.
+
+The absence of later recorded 429s does not establish that serialization caused that outcome. Earlier failures remain part of the evidence.
+
+Known recorded/estimated filming cost, counting every run once: **$0.0046831240**. Cost is unknown for **2 records**; these are not silently treated as free. Jev cost is a published-rate estimate, and local hardware is excluded.
+
+Capture timestamps have whole-second precision. Per-run offsets and derived finish times help locate a run, but do not establish frame-accurate synchronization or prove its response appeared on screen. Decode, continuous playback, UI interaction and visual privacy checks require separate evidence. Any unexpected count/linkage appears in the JSON `anomalies` arrays.
+<!-- filming-summary:end -->
+
+## Browser and media checks
+
+[Manual browser interactions](browser-interactions.json) are separate from API contract scoring. [Media verification](media-verification.json) records local recording hashes, full decoding, sampled visual checks, exact join checks, and the separately scoped normal-speed playback result. The raw clips and combined silent MP4 remain local, outside this Git repository.

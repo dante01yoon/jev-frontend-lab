@@ -51,7 +51,7 @@ All data is synthetic. Messages, signup and checkout controls are local demonstr
 
 - Shared fixtures, prompts, component catalogue, question builder, validators and refinement model.
 - Jev `jev-1.13.0`; Laya multilingual pinned checkpoint; Qwen3 Coder Next via fixed Parasail/bf16 endpoint.
-- UI wall time includes concurrent requests and rendering; use server stage timings for inference/network observations. Warm local inference is not directly equivalent to a cloud round trip.
+- UI wall time includes requests, rendering, and the process-wide LLM queue. LLM calls run one at a time; the queue wait is included in elapsed time and the 60-second timeout. No automatic retry or provider fallback. Use server stage timings for inference/network observations. Warm local inference is not directly equivalent to a cloud round trip.
 - First-interactive time begins with the request and ends after the initial model specification is committed and painted. A prepared preview is excluded.
 - A +LLM panel shows its planner cost plus refinement cost. A shared initial plan is counted once in batch totals. Local API cost excludes hardware and electricity. Missing provider cost is reported as unknown.
 - Revisions require four independent plans because previous designs can differ. Failures and validation rejection remain visible and logged.
@@ -64,7 +64,7 @@ npm run build
 npm test
 ```
 
-[Capture helper](scripts/CAPTURE.md) records only an explicitly selected demo window through macOS ScreenCaptureKit. Run logs and local media are ignored by Git. [Contract](CONTRACT.md) describes the typed interface. Verification evidence is summarized in `VERIFICATION.md` as checks complete.
+[Capture helper](scripts/CAPTURE.md) records only an explicitly selected demo window through macOS ScreenCaptureKit. Run logs and local media are ignored by Git. [Contract](CONTRACT.md) describes the typed interface. See [verification status](VERIFICATION.md), the [24-result API sample and filming evidence](evidence/README.md), and [manual browser interaction checks](evidence/browser-interactions.json). Six silent real-time clips capture initial composition, actual interaction and revision. Two HTTP 429 failures are retained. Clips 01–04 used concurrent LLM calls; clips 05–06 used the queued protocol, so their timings must not be pooled as one benchmark. Raw footage remains local; this repository contains curated measurements and capture tooling.
 
 ## Inspiration and primary sources
 

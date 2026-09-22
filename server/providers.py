@@ -20,6 +20,8 @@ LLM_MODEL = 'qwen/qwen3-coder-next'
 LLM_PROVIDER = 'parasail/bf16'
 DECISION_TIMEOUT = 10
 LLM_TIMEOUT = 60
+# Shared across Providers instances: at most one LLM HTTP request per process.
+_LLM_REQUEST_LOCK = threading.Lock()
 ALLOWED_ENV_KEYS = {'TYPESAFE_API_KEY', 'OPENROUTER_API_KEY', 'OPEN_ROUTER_API_KEY'}
 
 
@@ -89,7 +91,9 @@ class Providers:
         return {
             'jev':{'configured':bool(os.environ.get('TYPESAFE_API_KEY')), 'model':JEV_MODEL},
             'laya':{'available':self.runtime_available, 'ready':self.laya is not None, 'model':LAYA_MODEL, 'revision':LAYA_REVISION, 'device':self.laya_meta.get('device','not loaded'), **self.laya_meta, **({'error':self.laya_error} if self.laya_error else {})},
-            'llm':{'configured':bool(self.llm_key()), 'model':LLM_MODEL, 'provider':LLM_PROVIDER},
+            'llm':{'configured':bool(self.llm_key()), 'model':LLM_MODEL, 'provider':LLM_PROVIDER,
+                   'max_concurrent_requests':1, 'queue_scope':'process', 'queue_time_included_in_elapsed_ms':True,
+                   'timeout_seconds':LLM_TIMEOUT, 'timeout_includes_queue':True, 'automatic_retries':0},
         }
 
     @staticmethod
@@ -195,7 +199,32 @@ class Providers:
                    'provider':{'only':[LLM_PROVIDER], 'allow_fallbacks':False, 'require_parameters':True},
                    'messages':[{'role':'system','content':system},{'role':'user','content':json.dumps(user,ensure_ascii=False)}],
                    'response_format':{'type':'json_schema','json_schema':{'name':'ui_spec','strict':True,'schema':schema}}}
-        out = post_json('https://openrouter.ai/api/v1/chat/completions', payload, key, LLM_TIMEOUT)
+        queued_at = time.perf_counter()
+        if not _LLM_REQUEST_LOCK.acquire(timeout=LLM_TIMEOUT):
+            raise ProviderError('LLM queue timed out after 60s; no provider request, retry or fallback',
+                raw={'local_transport':{'queue_ms':round((time.perf_counter()-queued_at)*1000,1),
+                     'request_ms':0, 'max_concurrent_requests':1, 'provider_request_started':False}})
+        acquired_at = time.perf_counter()
+        queue_ms = round((acquired_at-queued_at)*1000,1)
+        request_started = False
+        try:
+            remaining = LLM_TIMEOUT-(acquired_at-queued_at)
+            if remaining <= 0:
+                raise ProviderError('LLM queue exhausted the 60s deadline; no provider request')
+            request_started = True
+            out = post_json('https://openrouter.ai/api/v1/chat/completions', payload, key, remaining)
+            out['local_transport'] = {'queue_ms':queue_ms,
+                'request_ms':round((time.perf_counter()-acquired_at)*1000,1),
+                'max_concurrent_requests':1, 'provider_request_started':True}
+            if time.perf_counter()-queued_at > LLM_TIMEOUT:
+                raise ProviderError('LLM exceeded the 60s queue-plus-request deadline; late response discarded', raw=out)
+        except ProviderError as exc:
+            exc.raw = {**(exc.raw or {}), 'local_transport':{'queue_ms':queue_ms,
+                'request_ms':round((time.perf_counter()-acquired_at)*1000,1),
+                'max_concurrent_requests':1, 'provider_request_started':request_started}}
+            raise
+        finally:
+            _LLM_REQUEST_LOCK.release()
         if out.get('model') != LLM_MODEL:
             raise ProviderError('LLM returned a different model than requested', raw=out)
         choices = out.get('choices') or []

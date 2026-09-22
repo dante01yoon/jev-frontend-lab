@@ -1,0 +1,2647 @@
+{
+  "scope": "Capture metadata linked to same-app server logs started within each capture window. Off-camera requests outside those windows are excluded. No media playback, visual inspection, UI automation or model calls performed by this script.",
+  "recording_count": 6,
+  "nominal_recording_count": 6,
+  "record_count_definition": "Per app: initial two shared plans plus two refinements (4 records); revision four independent plans plus two refinements (6 records). Nominal six-app total: 60 logical server records.",
+  "slot_count_definition": "Per app: four initial and four revision result slots. Nominal six-app total: 48. Slots are derived from run linkage, not proof of pixels displayed.",
+  "nominal_logical_server_records": 60,
+  "actual_unique_logical_server_records": 60,
+  "record_status_counts": {
+    "complete": 58,
+    "failed": 2
+  },
+  "nominal_result_slots": 48,
+  "derived_result_slot_count": 48,
+  "result_slot_status_counts": {
+    "PASS": 46,
+    "FAIL": 2
+  },
+  "known_cost_usd_counting_each_run_once": 0.004683124,
+  "records_with_unknown_cost": 2,
+  "cost_limit": "Jev published-rate estimates plus provider-returned usage. Local hardware excluded. Unknown failed-call cost is not zero. Not a billing invoice.",
+  "protocol_boundary": {
+    "metadata_filename": "protocol-v2.json",
+    "metadata_sha256": "7c046dc4c30fdc81a85ddefa0e51a373c111929f33d2dd29f57f10653ac71ee9",
+    "started_at": "2026-09-22T13:02:55.740423+00:00",
+    "clips": [
+      "05-support-inbox",
+      "06-product-landing"
+    ],
+    "change": "LLM requests serialized; queue included in elapsed; no retry or provider fallback",
+    "evidence_limit": "Operator protocol record and allowlisted run transport metadata; not causal evidence that serialization prevented provider errors."
+  },
+  "timing_limit": "Clips 01-04 precede LLM serialization; 05-06 follow it, per protocol-v2.json. Filming requests are interactive/concurrent and MUST NOT be pooled as a controlled benchmark. Capture timestamps have one-second precision; derived server finish excludes some response/log-write overhead. These observations do not establish that serialization caused the later absence of 429 errors.",
+  "failures": [
+    {
+      "run_id": "441223f7fc6d43708c6efe3d6d83fe22",
+      "app": "stays",
+      "provider": "jev+llm",
+      "kind": "refine",
+      "phase": "initial",
+      "failure_http_status": 429,
+      "cost_usd": null
+    },
+    {
+      "run_id": "191f3ae9deb040f2b31b45e753aac7d6",
+      "app": "board",
+      "provider": "laya+llm",
+      "kind": "refine",
+      "phase": "revision",
+      "failure_http_status": 429,
+      "cost_usd": null
+    }
+  ],
+  "clips": [
+    {
+      "clip": 1,
+      "app": "stays",
+      "video_filename": "01-stay-discovery.mp4",
+      "capture_metadata_filename": "01-stay-discovery.mp4.capture.json",
+      "capture_metadata_sha256": "ac675dc4708544c324faf19c0d867506131937d32cba29a58f7d1b9b53b2b58d",
+      "capture_window": {
+        "started_at": "2026-09-22T12:51:47+00:00",
+        "finished_at": "2026-09-22T12:53:21+00:00",
+        "timestamp_precision": "metadata reports whole seconds"
+      },
+      "capture": {
+        "completed": true,
+        "durationSeconds": 93,
+        "width": 1920,
+        "height": 1080,
+        "audio": false,
+        "recordedBytes": 5637612,
+        "observedCompleteFrameUpdates": 646
+      },
+      "protocol_group": "01-04_before_LLM_serialization",
+      "protocol_group_source": "protocol-v2.json capture assignment and boundary timestamp; not inferred from timings",
+      "logical_server_records": 10,
+      "record_status_counts": {
+        "complete": 9,
+        "failed": 1
+      },
+      "phase_and_kind_counts": {
+        "initial/plan": 2,
+        "initial/refine": 2,
+        "revision/plan": 4,
+        "revision/refine": 2
+      },
+      "derived_result_slots": [
+        {
+          "phase": "initial",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "0f1916d8c92f4affa632e28d98358e3f",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "jev+llm",
+          "api_result_status": "FAIL",
+          "run_id": "441223f7fc6d43708c6efe3d6d83fe22",
+          "planner_run_id": "0f1916d8c92f4affa632e28d98358e3f",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "61e2bdc8b0ce4c0d8b93da621bdf5fd9",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "4f62ecda5ffd4b82a391e229fc122815",
+          "planner_run_id": "61e2bdc8b0ce4c0d8b93da621bdf5fd9",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "fd3cf476a4f0402ead1b72ce313fe639",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "ebddad4aa6874fac9e14f65502880d79",
+          "planner_run_id": "f675be21488c4736aebab6af201224f4",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "9f85b7e496b74f75a7bc5dbea76a0051",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "200c242426e7423eac7f56933cb073ce",
+          "planner_run_id": "ec307fbc9aa24dba9cdccc2f29432c4e",
+          "browser_display_verified_by_this_script": false
+        }
+      ],
+      "runs": [
+        {
+          "run_id": "61e2bdc8b0ce4c0d8b93da621bdf5fd9",
+          "app": "stays",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "9e192f2e582b111c864cdbf946f652f0d2d785d7eeb5b9372d8ec5480e742fff",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:51:57.172716+00:00",
+          "server_elapsed_ms": 87.4,
+          "derived_finished_at": "2026-09-22T12:51:57.260116+00:00",
+          "offset_from_capture_start_ms": 10172.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 54.7
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 32.6
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "0f1916d8c92f4affa632e28d98358e3f",
+          "app": "stays",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "9e192f2e582b111c864cdbf946f652f0d2d785d7eeb5b9372d8ec5480e742fff",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:51:57.172785+00:00",
+          "server_elapsed_ms": 647.3,
+          "derived_finished_at": "2026-09-22T12:51:57.820085+00:00",
+          "offset_from_capture_start_ms": 10172.8,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 316.7
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 330.6
+            }
+          ],
+          "cost_usd": 5.8044e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "4f62ecda5ffd4b82a391e229fc122815",
+          "app": "stays",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "61e2bdc8b0ce4c0d8b93da621bdf5fd9",
+          "request_reference": {
+            "brief_sha256": "9e192f2e582b111c864cdbf946f652f0d2d785d7eeb5b9372d8ec5480e742fff",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:51:57.277731+00:00",
+          "server_elapsed_ms": 5272.5,
+          "derived_finished_at": "2026-09-22T12:52:02.550231+00:00",
+          "offset_from_capture_start_ms": 10277.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 5272.5
+            }
+          ],
+          "cost_usd": 0.00015776,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "441223f7fc6d43708c6efe3d6d83fe22",
+          "app": "stays",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "failed",
+          "phase": "initial",
+          "planner_run_id": "0f1916d8c92f4affa632e28d98358e3f",
+          "request_reference": {
+            "brief_sha256": "9e192f2e582b111c864cdbf946f652f0d2d785d7eeb5b9372d8ec5480e742fff",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:51:57.837734+00:00",
+          "server_elapsed_ms": 159.8,
+          "derived_finished_at": "2026-09-22T12:51:57.997534+00:00",
+          "offset_from_capture_start_ms": 10837.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [],
+          "cost_usd": null,
+          "cost_basis": "unknown_not_assumed_zero",
+          "observed_local_transport": null,
+          "failure_http_status": 429,
+          "failure_detail": "provider_HTTP_error"
+        },
+        {
+          "run_id": "fd3cf476a4f0402ead1b72ce313fe639",
+          "app": "stays",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "f17d69df7e7e1e2b3e642cc11ac6f17ce282548f4a6262d5932802160edac47b",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:52:45.371234+00:00",
+          "server_elapsed_ms": 632.0,
+          "derived_finished_at": "2026-09-22T12:52:46.003234+00:00",
+          "offset_from_capture_start_ms": 58371.2,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 340.8
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 291.1
+            }
+          ],
+          "cost_usd": 6.1362e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "9f85b7e496b74f75a7bc5dbea76a0051",
+          "app": "stays",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "f17d69df7e7e1e2b3e642cc11ac6f17ce282548f4a6262d5932802160edac47b",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:52:45.371478+00:00",
+          "server_elapsed_ms": 128.5,
+          "derived_finished_at": "2026-09-22T12:52:45.499978+00:00",
+          "offset_from_capture_start_ms": 58371.5,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 54.9
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 73.5
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "f675be21488c4736aebab6af201224f4",
+          "app": "stays",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "f17d69df7e7e1e2b3e642cc11ac6f17ce282548f4a6262d5932802160edac47b",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:52:45.371743+00:00",
+          "server_elapsed_ms": 700.8,
+          "derived_finished_at": "2026-09-22T12:52:46.072543+00:00",
+          "offset_from_capture_start_ms": 58371.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 322.3
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 378.4
+            }
+          ],
+          "cost_usd": 6.1362e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "ec307fbc9aa24dba9cdccc2f29432c4e",
+          "app": "stays",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "f17d69df7e7e1e2b3e642cc11ac6f17ce282548f4a6262d5932802160edac47b",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:52:45.372033+00:00",
+          "server_elapsed_ms": 165.9,
+          "derived_finished_at": "2026-09-22T12:52:45.537933+00:00",
+          "offset_from_capture_start_ms": 58372.0,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 90.8
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 75.0
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "200c242426e7423eac7f56933cb073ce",
+          "app": "stays",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "ec307fbc9aa24dba9cdccc2f29432c4e",
+          "request_reference": {
+            "brief_sha256": "f17d69df7e7e1e2b3e642cc11ac6f17ce282548f4a6262d5932802160edac47b",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:52:45.556800+00:00",
+          "server_elapsed_ms": 2999.7,
+          "derived_finished_at": "2026-09-22T12:52:48.556500+00:00",
+          "offset_from_capture_start_ms": 58556.8,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 2999.7
+            }
+          ],
+          "cost_usd": 0.00016324,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "ebddad4aa6874fac9e14f65502880d79",
+          "app": "stays",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "f675be21488c4736aebab6af201224f4",
+          "request_reference": {
+            "brief_sha256": "f17d69df7e7e1e2b3e642cc11ac6f17ce282548f4a6262d5932802160edac47b",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:52:46.086696+00:00",
+          "server_elapsed_ms": 3091.2,
+          "derived_finished_at": "2026-09-22T12:52:49.177896+00:00",
+          "offset_from_capture_start_ms": 59086.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 3091.2
+            }
+          ],
+          "cost_usd": 0.00015984,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        }
+      ],
+      "anomalies": []
+    },
+    {
+      "clip": 2,
+      "app": "analytics",
+      "video_filename": "02-revenue-dashboard.mp4",
+      "capture_metadata_filename": "02-revenue-dashboard.mp4.capture.json",
+      "capture_metadata_sha256": "05728da9ea03d03128d7a18ab624d1f9b7264da5f1746b716f54ff97c0158594",
+      "capture_window": {
+        "started_at": "2026-09-22T12:53:45+00:00",
+        "finished_at": "2026-09-22T12:55:19+00:00",
+        "timestamp_precision": "metadata reports whole seconds"
+      },
+      "capture": {
+        "completed": true,
+        "durationSeconds": 93,
+        "width": 1920,
+        "height": 1080,
+        "audio": false,
+        "recordedBytes": 4535509,
+        "observedCompleteFrameUpdates": 480
+      },
+      "protocol_group": "01-04_before_LLM_serialization",
+      "protocol_group_source": "protocol-v2.json capture assignment and boundary timestamp; not inferred from timings",
+      "logical_server_records": 10,
+      "record_status_counts": {
+        "complete": 10
+      },
+      "phase_and_kind_counts": {
+        "initial/plan": 2,
+        "initial/refine": 2,
+        "revision/plan": 4,
+        "revision/refine": 2
+      },
+      "derived_result_slots": [
+        {
+          "phase": "initial",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "1ad83204a7a54e569b9c780ba00500cb",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "c19ff51872f14cdd86e0e24d7bb3af45",
+          "planner_run_id": "1ad83204a7a54e569b9c780ba00500cb",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "ca0387a879584f6b80d6e095acbebd61",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "a3d0cd9716bd476baae29d84fabafe2f",
+          "planner_run_id": "ca0387a879584f6b80d6e095acbebd61",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "b3e3e25ed753407197bd5bab59ed85f7",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "19048f2c8ac54c1dab21e1bfaa0d2c4b",
+          "planner_run_id": "7490b471192041e7911428a6a8d130ae",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "afba5dc42d9b4d5b9b8752a459eab2b2",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "af123ab2b86849c2b09d736bdb403db7",
+          "planner_run_id": "3b95f3cdb3bf4e3292498e1a2ecbff67",
+          "browser_display_verified_by_this_script": false
+        }
+      ],
+      "runs": [
+        {
+          "run_id": "1ad83204a7a54e569b9c780ba00500cb",
+          "app": "analytics",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "b6d094fe4995430a647d9a4e92331b54c2960c42db9992f9003aae970cc836f0",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:53:58.348392+00:00",
+          "server_elapsed_ms": 642.0,
+          "derived_finished_at": "2026-09-22T12:53:58.990392+00:00",
+          "offset_from_capture_start_ms": 13348.4,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 343.3
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 298.6
+            }
+          ],
+          "cost_usd": 5.8674e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "ca0387a879584f6b80d6e095acbebd61",
+          "app": "analytics",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "b6d094fe4995430a647d9a4e92331b54c2960c42db9992f9003aae970cc836f0",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:53:58.348679+00:00",
+          "server_elapsed_ms": 81.7,
+          "derived_finished_at": "2026-09-22T12:53:58.430379+00:00",
+          "offset_from_capture_start_ms": 13348.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 50.0
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 31.6
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "a3d0cd9716bd476baae29d84fabafe2f",
+          "app": "analytics",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "ca0387a879584f6b80d6e095acbebd61",
+          "request_reference": {
+            "brief_sha256": "b6d094fe4995430a647d9a4e92331b54c2960c42db9992f9003aae970cc836f0",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:53:58.447863+00:00",
+          "server_elapsed_ms": 1946.8,
+          "derived_finished_at": "2026-09-22T12:54:00.394663+00:00",
+          "offset_from_capture_start_ms": 13447.9,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 1946.8
+            }
+          ],
+          "cost_usd": 0.00015676,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "c19ff51872f14cdd86e0e24d7bb3af45",
+          "app": "analytics",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "1ad83204a7a54e569b9c780ba00500cb",
+          "request_reference": {
+            "brief_sha256": "b6d094fe4995430a647d9a4e92331b54c2960c42db9992f9003aae970cc836f0",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:53:59.007552+00:00",
+          "server_elapsed_ms": 1748.6,
+          "derived_finished_at": "2026-09-22T12:54:00.756152+00:00",
+          "offset_from_capture_start_ms": 14007.6,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 1748.6
+            }
+          ],
+          "cost_usd": 0.00015356,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "b3e3e25ed753407197bd5bab59ed85f7",
+          "app": "analytics",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "58ab615cdc628b2963a221c8ca4c5dff67d8ee50132c84160c914ca827cebf06",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:54:38.297278+00:00",
+          "server_elapsed_ms": 599.3,
+          "derived_finished_at": "2026-09-22T12:54:38.896578+00:00",
+          "offset_from_capture_start_ms": 53297.3,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 300.3
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 298.9
+            }
+          ],
+          "cost_usd": 6.1824e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "afba5dc42d9b4d5b9b8752a459eab2b2",
+          "app": "analytics",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "58ab615cdc628b2963a221c8ca4c5dff67d8ee50132c84160c914ca827cebf06",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:54:38.297844+00:00",
+          "server_elapsed_ms": 112.3,
+          "derived_finished_at": "2026-09-22T12:54:38.410144+00:00",
+          "offset_from_capture_start_ms": 53297.8,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 62.1
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 50.2
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "7490b471192041e7911428a6a8d130ae",
+          "app": "analytics",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "58ab615cdc628b2963a221c8ca4c5dff67d8ee50132c84160c914ca827cebf06",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:54:38.298345+00:00",
+          "server_elapsed_ms": 638.5,
+          "derived_finished_at": "2026-09-22T12:54:38.936845+00:00",
+          "offset_from_capture_start_ms": 53298.3,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 289.8
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 348.6
+            }
+          ],
+          "cost_usd": 6.1824e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "3b95f3cdb3bf4e3292498e1a2ecbff67",
+          "app": "analytics",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "58ab615cdc628b2963a221c8ca4c5dff67d8ee50132c84160c914ca827cebf06",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:54:38.299493+00:00",
+          "server_elapsed_ms": 197.7,
+          "derived_finished_at": "2026-09-22T12:54:38.497193+00:00",
+          "offset_from_capture_start_ms": 53299.5,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 154.5
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 43.1
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "af123ab2b86849c2b09d736bdb403db7",
+          "app": "analytics",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "3b95f3cdb3bf4e3292498e1a2ecbff67",
+          "request_reference": {
+            "brief_sha256": "58ab615cdc628b2963a221c8ca4c5dff67d8ee50132c84160c914ca827cebf06",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:54:38.518695+00:00",
+          "server_elapsed_ms": 2251.2,
+          "derived_finished_at": "2026-09-22T12:54:40.769895+00:00",
+          "offset_from_capture_start_ms": 53518.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 2251.2
+            }
+          ],
+          "cost_usd": 0.00016968,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "19048f2c8ac54c1dab21e1bfaa0d2c4b",
+          "app": "analytics",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "7490b471192041e7911428a6a8d130ae",
+          "request_reference": {
+            "brief_sha256": "58ab615cdc628b2963a221c8ca4c5dff67d8ee50132c84160c914ca827cebf06",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:54:38.957040+00:00",
+          "server_elapsed_ms": 2180.8,
+          "derived_finished_at": "2026-09-22T12:54:41.137840+00:00",
+          "offset_from_capture_start_ms": 53957.0,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 2180.8
+            }
+          ],
+          "cost_usd": 0.0001726,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        }
+      ],
+      "anomalies": []
+    },
+    {
+      "clip": 3,
+      "app": "shop",
+      "video_filename": "03-studio-storefront.mp4",
+      "capture_metadata_filename": "03-studio-storefront.mp4.capture.json",
+      "capture_metadata_sha256": "ca45cb553e5012dfb293b0b0f90e41180c0f42c51d7d9c84913e48f514f7478b",
+      "capture_window": {
+        "started_at": "2026-09-22T12:55:35+00:00",
+        "finished_at": "2026-09-22T12:57:18+00:00",
+        "timestamp_precision": "metadata reports whole seconds"
+      },
+      "capture": {
+        "completed": true,
+        "durationSeconds": 102,
+        "width": 1920,
+        "height": 1080,
+        "audio": false,
+        "recordedBytes": 4253277,
+        "observedCompleteFrameUpdates": 470
+      },
+      "protocol_group": "01-04_before_LLM_serialization",
+      "protocol_group_source": "protocol-v2.json capture assignment and boundary timestamp; not inferred from timings",
+      "logical_server_records": 10,
+      "record_status_counts": {
+        "complete": 10
+      },
+      "phase_and_kind_counts": {
+        "initial/plan": 2,
+        "initial/refine": 2,
+        "revision/plan": 4,
+        "revision/refine": 2
+      },
+      "derived_result_slots": [
+        {
+          "phase": "initial",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "2bd47398a2734eb5bf5ff9cab34779f7",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "0dc298e702214f429fd12b94afb8b743",
+          "planner_run_id": "2bd47398a2734eb5bf5ff9cab34779f7",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "fce6b800b5a94522955b08f8df7c7fe8",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "b4c5236b326349aca7e50d14e3ee8f40",
+          "planner_run_id": "fce6b800b5a94522955b08f8df7c7fe8",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "93fa4cea433c492f85079d8d2c8cc739",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "e4e18afb842a4098a302c23c2263e72f",
+          "planner_run_id": "afab3a45821c4e3d8aecd13197d638d8",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "7bf97417d0f243c2888a924aedc3a9f3",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "257ca3a303a048a88a46f1557a426d2b",
+          "planner_run_id": "512806cefa6a4f3bbfc8cf2131961e45",
+          "browser_display_verified_by_this_script": false
+        }
+      ],
+      "runs": [
+        {
+          "run_id": "2bd47398a2734eb5bf5ff9cab34779f7",
+          "app": "shop",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "96e3ec408e57acb15d50631352a70ae905d4b28f4285ee5430f67a321e4bad55",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:55:42.754388+00:00",
+          "server_elapsed_ms": 857.1,
+          "derived_finished_at": "2026-09-22T12:55:43.611488+00:00",
+          "offset_from_capture_start_ms": 7754.4,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 486.4
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 370.5
+            }
+          ],
+          "cost_usd": 5.796e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "fce6b800b5a94522955b08f8df7c7fe8",
+          "app": "shop",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "96e3ec408e57acb15d50631352a70ae905d4b28f4285ee5430f67a321e4bad55",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:55:42.758862+00:00",
+          "server_elapsed_ms": 583.3,
+          "derived_finished_at": "2026-09-22T12:55:43.342162+00:00",
+          "offset_from_capture_start_ms": 7758.9,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 457.0
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 126.2
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "b4c5236b326349aca7e50d14e3ee8f40",
+          "app": "shop",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "fce6b800b5a94522955b08f8df7c7fe8",
+          "request_reference": {
+            "brief_sha256": "96e3ec408e57acb15d50631352a70ae905d4b28f4285ee5430f67a321e4bad55",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:55:43.379146+00:00",
+          "server_elapsed_ms": 3631.0,
+          "derived_finished_at": "2026-09-22T12:55:47.010146+00:00",
+          "offset_from_capture_start_ms": 8379.1,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 3630.9
+            }
+          ],
+          "cost_usd": 0.000158,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "0dc298e702214f429fd12b94afb8b743",
+          "app": "shop",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "2bd47398a2734eb5bf5ff9cab34779f7",
+          "request_reference": {
+            "brief_sha256": "96e3ec408e57acb15d50631352a70ae905d4b28f4285ee5430f67a321e4bad55",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:55:43.630524+00:00",
+          "server_elapsed_ms": 3366.1,
+          "derived_finished_at": "2026-09-22T12:55:46.996624+00:00",
+          "offset_from_capture_start_ms": 8630.5,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 3366.1
+            }
+          ],
+          "cost_usd": 0.0001588,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "93fa4cea433c492f85079d8d2c8cc739",
+          "app": "shop",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "0f4eb90fa9c6be95c8ea3c3acd967e27c00182126f151e433831ddf95ebfe3c6",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:56:43.141097+00:00",
+          "server_elapsed_ms": 762.1,
+          "derived_finished_at": "2026-09-22T12:56:43.903197+00:00",
+          "offset_from_capture_start_ms": 68141.1,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 420.3
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 341.8
+            }
+          ],
+          "cost_usd": 6.1614e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "7bf97417d0f243c2888a924aedc3a9f3",
+          "app": "shop",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "0f4eb90fa9c6be95c8ea3c3acd967e27c00182126f151e433831ddf95ebfe3c6",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:56:43.141443+00:00",
+          "server_elapsed_ms": 181.2,
+          "derived_finished_at": "2026-09-22T12:56:43.322643+00:00",
+          "offset_from_capture_start_ms": 68141.4,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 106.5
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 74.6
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "afab3a45821c4e3d8aecd13197d638d8",
+          "app": "shop",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "0f4eb90fa9c6be95c8ea3c3acd967e27c00182126f151e433831ddf95ebfe3c6",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:56:43.141787+00:00",
+          "server_elapsed_ms": 659.6,
+          "derived_finished_at": "2026-09-22T12:56:43.801387+00:00",
+          "offset_from_capture_start_ms": 68141.8,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 369.3
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 290.2
+            }
+          ],
+          "cost_usd": 6.1614e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "512806cefa6a4f3bbfc8cf2131961e45",
+          "app": "shop",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "0f4eb90fa9c6be95c8ea3c3acd967e27c00182126f151e433831ddf95ebfe3c6",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:56:43.142233+00:00",
+          "server_elapsed_ms": 218.2,
+          "derived_finished_at": "2026-09-22T12:56:43.360433+00:00",
+          "offset_from_capture_start_ms": 68142.2,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 142.7
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 75.4
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "257ca3a303a048a88a46f1557a426d2b",
+          "app": "shop",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "512806cefa6a4f3bbfc8cf2131961e45",
+          "request_reference": {
+            "brief_sha256": "0f4eb90fa9c6be95c8ea3c3acd967e27c00182126f151e433831ddf95ebfe3c6",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:56:43.378986+00:00",
+          "server_elapsed_ms": 3125.3,
+          "derived_finished_at": "2026-09-22T12:56:46.504286+00:00",
+          "offset_from_capture_start_ms": 68379.0,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 3125.2
+            }
+          ],
+          "cost_usd": 0.00016336,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "e4e18afb842a4098a302c23c2263e72f",
+          "app": "shop",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "afab3a45821c4e3d8aecd13197d638d8",
+          "request_reference": {
+            "brief_sha256": "0f4eb90fa9c6be95c8ea3c3acd967e27c00182126f151e433831ddf95ebfe3c6",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:56:43.818889+00:00",
+          "server_elapsed_ms": 3309.1,
+          "derived_finished_at": "2026-09-22T12:56:47.127989+00:00",
+          "offset_from_capture_start_ms": 68818.9,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 3309.1
+            }
+          ],
+          "cost_usd": 0.00017012,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        }
+      ],
+      "anomalies": []
+    },
+    {
+      "clip": 4,
+      "app": "board",
+      "video_filename": "04-team-workspace.mp4",
+      "capture_metadata_filename": "04-team-workspace.mp4.capture.json",
+      "capture_metadata_sha256": "cebdfe47a0fe65de4b6e12fdc967809787f58c3439b6b8bb62f595c04f6955fe",
+      "capture_window": {
+        "started_at": "2026-09-22T12:57:39+00:00",
+        "finished_at": "2026-09-22T13:00:05+00:00",
+        "timestamp_precision": "metadata reports whole seconds"
+      },
+      "capture": {
+        "completed": true,
+        "durationSeconds": 145,
+        "width": 1920,
+        "height": 1080,
+        "audio": false,
+        "recordedBytes": 3660500,
+        "observedCompleteFrameUpdates": 454
+      },
+      "protocol_group": "01-04_before_LLM_serialization",
+      "protocol_group_source": "protocol-v2.json capture assignment and boundary timestamp; not inferred from timings",
+      "logical_server_records": 10,
+      "record_status_counts": {
+        "complete": 9,
+        "failed": 1
+      },
+      "phase_and_kind_counts": {
+        "initial/plan": 2,
+        "initial/refine": 2,
+        "revision/plan": 4,
+        "revision/refine": 2
+      },
+      "derived_result_slots": [
+        {
+          "phase": "initial",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "262d4fd4a367445791243d8350fc09eb",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "db677f14c92f470a8b7a16954fe3283b",
+          "planner_run_id": "262d4fd4a367445791243d8350fc09eb",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "1ba618c5721b42489cc49ce2aec4c90f",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "81b9639a761c4816871a5032858ce73a",
+          "planner_run_id": "1ba618c5721b42489cc49ce2aec4c90f",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "220e30605dc24b4ab37dd3e5b3605cd1",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "0a7ab764a89a4604bfe0abf1b3b76259",
+          "planner_run_id": "18961d6d592d4a119a9506f9f37c7677",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "44259fdaca794023b50c13cc953927c5",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya+llm",
+          "api_result_status": "FAIL",
+          "run_id": "191f3ae9deb040f2b31b45e753aac7d6",
+          "planner_run_id": "782d772ff83848b690c8f4ee11332b72",
+          "browser_display_verified_by_this_script": false
+        }
+      ],
+      "runs": [
+        {
+          "run_id": "262d4fd4a367445791243d8350fc09eb",
+          "app": "board",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "54cd4324722336c58c160f34a1f59e92685625d279a716c3c62959cb09f5c696",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:57:46.470038+00:00",
+          "server_elapsed_ms": 819.1,
+          "derived_finished_at": "2026-09-22T12:57:47.289138+00:00",
+          "offset_from_capture_start_ms": 7470.0,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 337.6
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 481.4
+            }
+          ],
+          "cost_usd": 5.7876e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "1ba618c5721b42489cc49ce2aec4c90f",
+          "app": "board",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "54cd4324722336c58c160f34a1f59e92685625d279a716c3c62959cb09f5c696",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:57:46.470667+00:00",
+          "server_elapsed_ms": 93.9,
+          "derived_finished_at": "2026-09-22T12:57:46.564567+00:00",
+          "offset_from_capture_start_ms": 7470.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 61.9
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 31.9
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "81b9639a761c4816871a5032858ce73a",
+          "app": "board",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "1ba618c5721b42489cc49ce2aec4c90f",
+          "request_reference": {
+            "brief_sha256": "54cd4324722336c58c160f34a1f59e92685625d279a716c3c62959cb09f5c696",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:57:46.577702+00:00",
+          "server_elapsed_ms": 2525.2,
+          "derived_finished_at": "2026-09-22T12:57:49.102902+00:00",
+          "offset_from_capture_start_ms": 7577.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 2525.2
+            }
+          ],
+          "cost_usd": 0.00015956,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "db677f14c92f470a8b7a16954fe3283b",
+          "app": "board",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "262d4fd4a367445791243d8350fc09eb",
+          "request_reference": {
+            "brief_sha256": "54cd4324722336c58c160f34a1f59e92685625d279a716c3c62959cb09f5c696",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T12:57:47.306991+00:00",
+          "server_elapsed_ms": 2078.1,
+          "derived_finished_at": "2026-09-22T12:57:49.385091+00:00",
+          "offset_from_capture_start_ms": 8307.0,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 2078.1
+            }
+          ],
+          "cost_usd": 0.00015672,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "220e30605dc24b4ab37dd3e5b3605cd1",
+          "app": "board",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "b59bc8456b2bf81c2867993575b7f4d100480cdebe05b60f9be5f70195e5b9b8",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:58:35.410850+00:00",
+          "server_elapsed_ms": 609.9,
+          "derived_finished_at": "2026-09-22T12:58:36.020750+00:00",
+          "offset_from_capture_start_ms": 56410.9,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 311.4
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 298.4
+            }
+          ],
+          "cost_usd": 6.0858e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "44259fdaca794023b50c13cc953927c5",
+          "app": "board",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "b59bc8456b2bf81c2867993575b7f4d100480cdebe05b60f9be5f70195e5b9b8",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:58:35.411147+00:00",
+          "server_elapsed_ms": 231.6,
+          "derived_finished_at": "2026-09-22T12:58:35.642747+00:00",
+          "offset_from_capture_start_ms": 56411.1,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 152.2
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 79.3
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "18961d6d592d4a119a9506f9f37c7677",
+          "app": "board",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "b59bc8456b2bf81c2867993575b7f4d100480cdebe05b60f9be5f70195e5b9b8",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:58:35.411668+00:00",
+          "server_elapsed_ms": 688.0,
+          "derived_finished_at": "2026-09-22T12:58:36.099668+00:00",
+          "offset_from_capture_start_ms": 56411.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 366.7
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 321.2
+            }
+          ],
+          "cost_usd": 6.0858e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "782d772ff83848b690c8f4ee11332b72",
+          "app": "board",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "b59bc8456b2bf81c2867993575b7f4d100480cdebe05b60f9be5f70195e5b9b8",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:58:35.412128+00:00",
+          "server_elapsed_ms": 268.5,
+          "derived_finished_at": "2026-09-22T12:58:35.680628+00:00",
+          "offset_from_capture_start_ms": 56412.1,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 186.8
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 81.6
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "191f3ae9deb040f2b31b45e753aac7d6",
+          "app": "board",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "failed",
+          "phase": "revision",
+          "planner_run_id": "782d772ff83848b690c8f4ee11332b72",
+          "request_reference": {
+            "brief_sha256": "b59bc8456b2bf81c2867993575b7f4d100480cdebe05b60f9be5f70195e5b9b8",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:58:35.697147+00:00",
+          "server_elapsed_ms": 218.5,
+          "derived_finished_at": "2026-09-22T12:58:35.915647+00:00",
+          "offset_from_capture_start_ms": 56697.1,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [],
+          "cost_usd": null,
+          "cost_basis": "unknown_not_assumed_zero",
+          "observed_local_transport": null,
+          "failure_http_status": 429,
+          "failure_detail": "provider_HTTP_error"
+        },
+        {
+          "run_id": "0a7ab764a89a4604bfe0abf1b3b76259",
+          "app": "board",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "18961d6d592d4a119a9506f9f37c7677",
+          "request_reference": {
+            "brief_sha256": "b59bc8456b2bf81c2867993575b7f4d100480cdebe05b60f9be5f70195e5b9b8",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T12:58:36.117296+00:00",
+          "server_elapsed_ms": 3500.6,
+          "derived_finished_at": "2026-09-22T12:58:39.617896+00:00",
+          "offset_from_capture_start_ms": 57117.3,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 3500.6
+            }
+          ],
+          "cost_usd": 0.000167,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        }
+      ],
+      "anomalies": []
+    },
+    {
+      "clip": 5,
+      "app": "inbox",
+      "video_filename": "05-support-inbox.mp4",
+      "capture_metadata_filename": "05-support-inbox.mp4.capture.json",
+      "capture_metadata_sha256": "6fff74a185e22020cb613dffeb530cd58944ccb8543bc159d9c55708fa4df338",
+      "capture_window": {
+        "started_at": "2026-09-22T13:04:07+00:00",
+        "finished_at": "2026-09-22T13:08:27+00:00",
+        "timestamp_precision": "metadata reports whole seconds"
+      },
+      "capture": {
+        "completed": true,
+        "durationSeconds": 259,
+        "width": 1920,
+        "height": 1080,
+        "audio": false,
+        "recordedBytes": 5034524,
+        "observedCompleteFrameUpdates": 724
+      },
+      "protocol_group": "05-06_after_LLM_serialization",
+      "protocol_group_source": "protocol-v2.json capture assignment and boundary timestamp; not inferred from timings",
+      "logical_server_records": 10,
+      "record_status_counts": {
+        "complete": 10
+      },
+      "phase_and_kind_counts": {
+        "initial/plan": 2,
+        "initial/refine": 2,
+        "revision/plan": 4,
+        "revision/refine": 2
+      },
+      "derived_result_slots": [
+        {
+          "phase": "initial",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "73fbbbe0aea7432c971b0f2067a5375f",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "2ca22ccd550842d2a641d69b431c77e8",
+          "planner_run_id": "73fbbbe0aea7432c971b0f2067a5375f",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "4767ea4578a0469c850209ebff11fa9b",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "1ec72e8ddf07404c81c2182238cb9140",
+          "planner_run_id": "4767ea4578a0469c850209ebff11fa9b",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "6435573708c94a39bd85b1e930909049",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "58087d8394d146bea49a7950e7c3f42f",
+          "planner_run_id": "44afd27f67d64fa29dfdb218a76d1a97",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "b76126cdebce400985d38a3807673b6a",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "3277ce8947b6456b8022225a66aa06c9",
+          "planner_run_id": "7213e64280df45b1be98c547d39a0cec",
+          "browser_display_verified_by_this_script": false
+        }
+      ],
+      "runs": [
+        {
+          "run_id": "73fbbbe0aea7432c971b0f2067a5375f",
+          "app": "inbox",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "f3cfd1291c76f137e99ee7df4a8d6429bda67fb54871c6410f34072accb1b709",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T13:04:17.014868+00:00",
+          "server_elapsed_ms": 658.6,
+          "derived_finished_at": "2026-09-22T13:04:17.673468+00:00",
+          "offset_from_capture_start_ms": 10014.9,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 325.6
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 333.0
+            }
+          ],
+          "cost_usd": 5.796e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "4767ea4578a0469c850209ebff11fa9b",
+          "app": "inbox",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "f3cfd1291c76f137e99ee7df4a8d6429bda67fb54871c6410f34072accb1b709",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T13:04:17.016056+00:00",
+          "server_elapsed_ms": 418.2,
+          "derived_finished_at": "2026-09-22T13:04:17.434256+00:00",
+          "offset_from_capture_start_ms": 10016.1,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 379.1
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 39.1
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "1ec72e8ddf07404c81c2182238cb9140",
+          "app": "inbox",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "4767ea4578a0469c850209ebff11fa9b",
+          "request_reference": {
+            "brief_sha256": "f3cfd1291c76f137e99ee7df4a8d6429bda67fb54871c6410f34072accb1b709",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T13:04:17.450159+00:00",
+          "server_elapsed_ms": 3190.7,
+          "derived_finished_at": "2026-09-22T13:04:20.640859+00:00",
+          "offset_from_capture_start_ms": 10450.2,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 3190.6
+            }
+          ],
+          "cost_usd": 0.00015304,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": {
+            "queue_ms": 0.0,
+            "request_ms": 3190.6,
+            "max_concurrent_requests": 1,
+            "provider_request_started": true
+          },
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "2ca22ccd550842d2a641d69b431c77e8",
+          "app": "inbox",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "73fbbbe0aea7432c971b0f2067a5375f",
+          "request_reference": {
+            "brief_sha256": "f3cfd1291c76f137e99ee7df4a8d6429bda67fb54871c6410f34072accb1b709",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T13:04:17.690189+00:00",
+          "server_elapsed_ms": 5433.6,
+          "derived_finished_at": "2026-09-22T13:04:23.123789+00:00",
+          "offset_from_capture_start_ms": 10690.2,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 5433.5
+            }
+          ],
+          "cost_usd": 0.0001558,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": {
+            "queue_ms": 2951.5,
+            "request_ms": 2482.0,
+            "max_concurrent_requests": 1,
+            "provider_request_started": true
+          },
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "6435573708c94a39bd85b1e930909049",
+          "app": "inbox",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "2a16d9ec546b7ae3d532a0852f06a04bd1b18f07bd2827cd7db442182d8a5198",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:07:49.548418+00:00",
+          "server_elapsed_ms": 655.2,
+          "derived_finished_at": "2026-09-22T13:07:50.203618+00:00",
+          "offset_from_capture_start_ms": 222548.4,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 392.7
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 262.4
+            }
+          ],
+          "cost_usd": 6.069e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "b76126cdebce400985d38a3807673b6a",
+          "app": "inbox",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "2a16d9ec546b7ae3d532a0852f06a04bd1b18f07bd2827cd7db442182d8a5198",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:07:49.548743+00:00",
+          "server_elapsed_ms": 151.4,
+          "derived_finished_at": "2026-09-22T13:07:49.700143+00:00",
+          "offset_from_capture_start_ms": 222548.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 67.2
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 84.1
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "44afd27f67d64fa29dfdb218a76d1a97",
+          "app": "inbox",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "2a16d9ec546b7ae3d532a0852f06a04bd1b18f07bd2827cd7db442182d8a5198",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:07:49.549060+00:00",
+          "server_elapsed_ms": 604.5,
+          "derived_finished_at": "2026-09-22T13:07:50.153560+00:00",
+          "offset_from_capture_start_ms": 222549.1,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 285.4
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 319.0
+            }
+          ],
+          "cost_usd": 6.069e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "7213e64280df45b1be98c547d39a0cec",
+          "app": "inbox",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "2a16d9ec546b7ae3d532a0852f06a04bd1b18f07bd2827cd7db442182d8a5198",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:07:49.549572+00:00",
+          "server_elapsed_ms": 358.6,
+          "derived_finished_at": "2026-09-22T13:07:49.908172+00:00",
+          "offset_from_capture_start_ms": 222549.6,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 108.9
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 249.7
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "3277ce8947b6456b8022225a66aa06c9",
+          "app": "inbox",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "7213e64280df45b1be98c547d39a0cec",
+          "request_reference": {
+            "brief_sha256": "2a16d9ec546b7ae3d532a0852f06a04bd1b18f07bd2827cd7db442182d8a5198",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:07:49.936382+00:00",
+          "server_elapsed_ms": 2860.2,
+          "derived_finished_at": "2026-09-22T13:07:52.796582+00:00",
+          "offset_from_capture_start_ms": 222936.4,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 2860.2
+            }
+          ],
+          "cost_usd": 0.00016508,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": {
+            "queue_ms": 0.0,
+            "request_ms": 2860.1,
+            "max_concurrent_requests": 1,
+            "provider_request_started": true
+          },
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "58087d8394d146bea49a7950e7c3f42f",
+          "app": "inbox",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "44afd27f67d64fa29dfdb218a76d1a97",
+          "request_reference": {
+            "brief_sha256": "2a16d9ec546b7ae3d532a0852f06a04bd1b18f07bd2827cd7db442182d8a5198",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:07:50.171097+00:00",
+          "server_elapsed_ms": 5427.3,
+          "derived_finished_at": "2026-09-22T13:07:55.598397+00:00",
+          "offset_from_capture_start_ms": 223171.1,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 5427.3
+            }
+          ],
+          "cost_usd": 0.0001648,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": {
+            "queue_ms": 2626.2,
+            "request_ms": 2801.0,
+            "max_concurrent_requests": 1,
+            "provider_request_started": true
+          },
+          "failure_http_status": null,
+          "failure_detail": null
+        }
+      ],
+      "anomalies": []
+    },
+    {
+      "clip": 6,
+      "app": "landing",
+      "video_filename": "06-product-landing.mp4",
+      "capture_metadata_filename": "06-product-landing.mp4.capture.json",
+      "capture_metadata_sha256": "0025218c5aecf05cbb47b5f65ba9e2f4c557e6610962f43dfd95d9043620bd4b",
+      "capture_window": {
+        "started_at": "2026-09-22T13:08:46+00:00",
+        "finished_at": "2026-09-22T13:10:12+00:00",
+        "timestamp_precision": "metadata reports whole seconds"
+      },
+      "capture": {
+        "completed": true,
+        "durationSeconds": 85,
+        "width": 1920,
+        "height": 1080,
+        "audio": false,
+        "recordedBytes": 6327646,
+        "observedCompleteFrameUpdates": 894
+      },
+      "protocol_group": "05-06_after_LLM_serialization",
+      "protocol_group_source": "protocol-v2.json capture assignment and boundary timestamp; not inferred from timings",
+      "logical_server_records": 10,
+      "record_status_counts": {
+        "complete": 10
+      },
+      "phase_and_kind_counts": {
+        "initial/plan": 2,
+        "initial/refine": 2,
+        "revision/plan": 4,
+        "revision/refine": 2
+      },
+      "derived_result_slots": [
+        {
+          "phase": "initial",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "3bd153b0a3d14d338bde69835cb5e658",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "7c8d472d11a04faeafc1c246ce5547f6",
+          "planner_run_id": "3bd153b0a3d14d338bde69835cb5e658",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "3fc7b96e2ceb47d284a2630771d780e7",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "initial",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "9077a2ae4074405da39d82075c99faef",
+          "planner_run_id": "3fc7b96e2ceb47d284a2630771d780e7",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev",
+          "api_result_status": "PASS",
+          "run_id": "2d1f6058b5ed45b3bf57f853a3d3bf94",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "jev+llm",
+          "api_result_status": "PASS",
+          "run_id": "6025f165ae2441859b0ba9c9d8a263c3",
+          "planner_run_id": "824b59f024794c2d98275336644f6e56",
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya",
+          "api_result_status": "PASS",
+          "run_id": "122c37f7e7bd4d6ebbe3c4b84e74f784",
+          "planner_run_id": null,
+          "browser_display_verified_by_this_script": false
+        },
+        {
+          "phase": "revision",
+          "mode": "laya+llm",
+          "api_result_status": "PASS",
+          "run_id": "e9ab7432261547a482a6ffbc1ab21eb4",
+          "planner_run_id": "cddaa71a7ec2452b925569cf9c34f6e5",
+          "browser_display_verified_by_this_script": false
+        }
+      ],
+      "runs": [
+        {
+          "run_id": "3bd153b0a3d14d338bde69835cb5e658",
+          "app": "landing",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "ca2c257b8b400b665196eab0f00b0cc544427a82c0ff513c6a051d0f3b8170d8",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T13:08:51.725321+00:00",
+          "server_elapsed_ms": 625.7,
+          "derived_finished_at": "2026-09-22T13:08:52.351021+00:00",
+          "offset_from_capture_start_ms": 5725.3,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 319.4
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 306.2
+            }
+          ],
+          "cost_usd": 6.0186e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "3fc7b96e2ceb47d284a2630771d780e7",
+          "app": "landing",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "ca2c257b8b400b665196eab0f00b0cc544427a82c0ff513c6a051d0f3b8170d8",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T13:08:51.725710+00:00",
+          "server_elapsed_ms": 131.2,
+          "derived_finished_at": "2026-09-22T13:08:51.856910+00:00",
+          "offset_from_capture_start_ms": 5725.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 83.8
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 47.3
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "9077a2ae4074405da39d82075c99faef",
+          "app": "landing",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "3fc7b96e2ceb47d284a2630771d780e7",
+          "request_reference": {
+            "brief_sha256": "ca2c257b8b400b665196eab0f00b0cc544427a82c0ff513c6a051d0f3b8170d8",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T13:08:51.879912+00:00",
+          "server_elapsed_ms": 2556.2,
+          "derived_finished_at": "2026-09-22T13:08:54.436112+00:00",
+          "offset_from_capture_start_ms": 5879.9,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 2556.1
+            }
+          ],
+          "cost_usd": 0.000168,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": {
+            "queue_ms": 0.0,
+            "request_ms": 2556.1,
+            "max_concurrent_requests": 1,
+            "provider_request_started": true
+          },
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "7c8d472d11a04faeafc1c246ce5547f6",
+          "app": "landing",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "initial",
+          "planner_run_id": "3bd153b0a3d14d338bde69835cb5e658",
+          "request_reference": {
+            "brief_sha256": "ca2c257b8b400b665196eab0f00b0cc544427a82c0ff513c6a051d0f3b8170d8",
+            "has_previous_spec": false
+          },
+          "created_at": "2026-09-22T13:08:52.369530+00:00",
+          "server_elapsed_ms": 6959.3,
+          "derived_finished_at": "2026-09-22T13:08:59.328830+00:00",
+          "offset_from_capture_start_ms": 6369.5,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 6959.3
+            }
+          ],
+          "cost_usd": 0.00016892,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": {
+            "queue_ms": 2067.1,
+            "request_ms": 4892.1,
+            "max_concurrent_requests": 1,
+            "provider_request_started": true
+          },
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "2d1f6058b5ed45b3bf57f853a3d3bf94",
+          "app": "landing",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "6fece054956c91a3bd985ab1676272cc6ae2c6f2db4aef6d7603ba31f3b87d03",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:09:33.214729+00:00",
+          "server_elapsed_ms": 655.4,
+          "derived_finished_at": "2026-09-22T13:09:33.870129+00:00",
+          "offset_from_capture_start_ms": 47214.7,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 341.3
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 314.0
+            }
+          ],
+          "cost_usd": 6.3504e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "122c37f7e7bd4d6ebbe3c4b84e74f784",
+          "app": "landing",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "6fece054956c91a3bd985ab1676272cc6ae2c6f2db4aef6d7603ba31f3b87d03",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:09:33.214989+00:00",
+          "server_elapsed_ms": 157.7,
+          "derived_finished_at": "2026-09-22T13:09:33.372689+00:00",
+          "offset_from_capture_start_ms": 47215.0,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 75.5
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 82.2
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "824b59f024794c2d98275336644f6e56",
+          "app": "landing",
+          "provider": "jev",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "6fece054956c91a3bd985ab1676272cc6ae2c6f2db4aef6d7603ba31f3b87d03",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:09:33.215233+00:00",
+          "server_elapsed_ms": 631.1,
+          "derived_finished_at": "2026-09-22T13:09:33.846333+00:00",
+          "offset_from_capture_start_ms": 47215.2,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 340.9
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 290.1
+            }
+          ],
+          "cost_usd": 6.3504e-05,
+          "cost_basis": "published_rate_estimate",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "cddaa71a7ec2452b925569cf9c34f6e5",
+          "app": "landing",
+          "provider": "laya",
+          "kind": "plan",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": null,
+          "request_reference": {
+            "brief_sha256": "6fece054956c91a3bd985ab1676272cc6ae2c6f2db4aef6d7603ba31f3b87d03",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:09:33.215540+00:00",
+          "server_elapsed_ms": 201.1,
+          "derived_finished_at": "2026-09-22T13:09:33.416640+00:00",
+          "offset_from_capture_start_ms": 47215.5,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "decision_1",
+              "elapsed_ms": 115.6
+            },
+            {
+              "name": "decision_2",
+              "elapsed_ms": 85.5
+            }
+          ],
+          "cost_usd": 0,
+          "cost_basis": "API_charge_only_hardware_excluded",
+          "observed_local_transport": null,
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "e9ab7432261547a482a6ffbc1ab21eb4",
+          "app": "landing",
+          "provider": "laya+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "cddaa71a7ec2452b925569cf9c34f6e5",
+          "request_reference": {
+            "brief_sha256": "6fece054956c91a3bd985ab1676272cc6ae2c6f2db4aef6d7603ba31f3b87d03",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:09:33.431012+00:00",
+          "server_elapsed_ms": 3554.3,
+          "derived_finished_at": "2026-09-22T13:09:36.985312+00:00",
+          "offset_from_capture_start_ms": 47431.0,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 3554.3
+            }
+          ],
+          "cost_usd": 0.00017052,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": {
+            "queue_ms": 0.0,
+            "request_ms": 3554.2,
+            "max_concurrent_requests": 1,
+            "provider_request_started": true
+          },
+          "failure_http_status": null,
+          "failure_detail": null
+        },
+        {
+          "run_id": "6025f165ae2441859b0ba9c9d8a263c3",
+          "app": "landing",
+          "provider": "jev+llm",
+          "kind": "refine",
+          "status": "complete",
+          "phase": "revision",
+          "planner_run_id": "824b59f024794c2d98275336644f6e56",
+          "request_reference": {
+            "brief_sha256": "6fece054956c91a3bd985ab1676272cc6ae2c6f2db4aef6d7603ba31f3b87d03",
+            "has_previous_spec": true
+          },
+          "created_at": "2026-09-22T13:09:33.859321+00:00",
+          "server_elapsed_ms": 8108.6,
+          "derived_finished_at": "2026-09-22T13:09:41.967921+00:00",
+          "offset_from_capture_start_ms": 47859.3,
+          "started_inside_capture_window": true,
+          "derived_finish_inside_capture_window": true,
+          "stages": [
+            {
+              "name": "llm_refine",
+              "elapsed_ms": 8108.5
+            }
+          ],
+          "cost_usd": 0.00017956,
+          "cost_basis": "provider_returned_usage_cost",
+          "observed_local_transport": {
+            "queue_ms": 3126.7,
+            "request_ms": 4981.8,
+            "max_concurrent_requests": 1,
+            "provider_request_started": true
+          },
+          "failure_http_status": null,
+          "failure_detail": null
+        }
+      ],
+      "anomalies": []
+    }
+  ],
+  "browser_display_verification": "NOT_RUN_BY_THIS_SCRIPT",
+  "media_decode_and_full_playback": "NOT_RUN_BY_THIS_SCRIPT",
+  "aesthetic_quality": "NOT_RUN_BY_THIS_SCRIPT"
+}
