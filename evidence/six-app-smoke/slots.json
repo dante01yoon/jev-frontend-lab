@@ -1,0 +1,1129 @@
+[
+  {
+    "case_id": "stays-editorial",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "stays",
+    "mode": "jev",
+    "status": "PASS",
+    "run_id": "1d706b57134748b193da121fd70d7028",
+    "wall_ms": 615.1,
+    "pipeline_server_ms": 612.6,
+    "spec": {
+      "app": "stays",
+      "title": "Elsewhere",
+      "subtitle": "Find a place worth slowing down for.",
+      "theme": "sand",
+      "layout": "editorial",
+      "sections": [
+        "filters",
+        "results",
+        "compare",
+        "saved"
+      ],
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 5.8044e-05
+  },
+  {
+    "case_id": "stays-editorial",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "stays",
+    "mode": "jev+llm",
+    "status": "PASS",
+    "run_id": "d38d24fe4f0f4992aacbeb0a6d4ba67b",
+    "planner_run_id": "1d706b57134748b193da121fd70d7028",
+    "wall_ms": 3089.7,
+    "pipeline_server_ms": 3084.4,
+    "spec": {
+      "app": "stays",
+      "theme": "sand",
+      "layout": "editorial",
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "title": "Elsewhere",
+      "subtitle": "Find a place worth slowing down for.",
+      "note": "Editorial layout with warm sand palette, serif headings, soft corners, and a large hero image. Prioritizes photography, with filters, results grid, and compare panel.",
+      "sections": [
+        "filters",
+        "results",
+        "compare"
+      ]
+    },
+    "diff": [
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Editorial layout with warm sand palette, serif headings, soft corners, and a large hero image. Prioritizes photography, with filters, results grid, and compare panel."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "filters",
+          "results",
+          "compare",
+          "saved"
+        ],
+        "after": [
+          "filters",
+          "results",
+          "compare"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.000225644
+  },
+  {
+    "case_id": "stays-editorial",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "stays",
+    "mode": "laya",
+    "status": "PASS",
+    "run_id": "f9a3eead17634a75933a5b1c423a8c75",
+    "wall_ms": 1076.8,
+    "pipeline_server_ms": 1074.9,
+    "spec": {
+      "app": "stays",
+      "title": "Elsewhere",
+      "subtitle": "Find a place worth slowing down for.",
+      "theme": "sand",
+      "layout": "editorial",
+      "sections": [
+        "results",
+        "filters"
+      ],
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "sharp",
+      "emphasis": "actions",
+      "hero": "hidden",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 0
+  },
+  {
+    "case_id": "stays-editorial",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "stays",
+    "mode": "laya+llm",
+    "status": "PASS",
+    "run_id": "56c3bb04de2f4e23a698952049ce744d",
+    "planner_run_id": "f9a3eead17634a75933a5b1c423a8c75",
+    "wall_ms": 2862.4,
+    "pipeline_server_ms": 2858.8,
+    "spec": {
+      "app": "stays",
+      "theme": "sand",
+      "layout": "editorial",
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "title": "Elsewhere",
+      "subtitle": "Find a place worth slowing down for.",
+      "note": "Warm sand palette with soft corners, serif headings, and a large hero image to anchor the editorial discovery flow.",
+      "sections": [
+        "filters",
+        "results",
+        "compare"
+      ]
+    },
+    "diff": [
+      {
+        "field": "corners",
+        "before": "sharp",
+        "after": "soft"
+      },
+      {
+        "field": "emphasis",
+        "before": "actions",
+        "after": "visual"
+      },
+      {
+        "field": "hero",
+        "before": "hidden",
+        "after": "large"
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Warm sand palette with soft corners, serif headings, and a large hero image to anchor the editorial discovery flow."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "results",
+          "filters"
+        ],
+        "after": [
+          "filters",
+          "results",
+          "compare"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.00015648
+  },
+  {
+    "case_id": "analytics-compact",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "analytics",
+    "mode": "laya",
+    "status": "PASS",
+    "run_id": "ac1c3eedbe074e24aa1d5ba828300b8a",
+    "wall_ms": 173.6,
+    "pipeline_server_ms": 170.4,
+    "spec": {
+      "app": "analytics",
+      "title": "Forma Analytics",
+      "subtitle": "A clearer view of your business.",
+      "theme": "paper",
+      "layout": "compact",
+      "sections": [
+        "chart",
+        "kpis",
+        "transactions",
+        "breakdown"
+      ],
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "visual",
+      "hero": "small",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 0
+  },
+  {
+    "case_id": "analytics-compact",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "analytics",
+    "mode": "laya+llm",
+    "status": "PASS",
+    "run_id": "c4fa9d6b24ae4447a0a4e3728dcf9188",
+    "planner_run_id": "ac1c3eedbe074e24aa1d5ba828300b8a",
+    "wall_ms": 2185.1,
+    "pipeline_server_ms": 2180.3,
+    "spec": {
+      "app": "analytics",
+      "theme": "paper",
+      "layout": "grid",
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "data",
+      "hero": "small",
+      "title": "Revenue Dashboard",
+      "subtitle": "Real-time revenue insights in a clean, paper-inspired interface.",
+      "note": "Compact grid layout prioritizes KPIs and chart; transactions and breakdown placed below for quick scanning.",
+      "sections": [
+        "kpis",
+        "chart",
+        "transactions",
+        "breakdown"
+      ]
+    },
+    "diff": [
+      {
+        "field": "layout",
+        "before": "compact",
+        "after": "grid"
+      },
+      {
+        "field": "emphasis",
+        "before": "visual",
+        "after": "data"
+      },
+      {
+        "field": "title",
+        "before": "Forma Analytics",
+        "after": "Revenue Dashboard"
+      },
+      {
+        "field": "subtitle",
+        "before": "A clearer view of your business.",
+        "after": "Real-time revenue insights in a clean, paper-inspired interface."
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Compact grid layout prioritizes KPIs and chart; transactions and breakdown placed below for quick scanning."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "chart",
+          "kpis",
+          "transactions",
+          "breakdown"
+        ],
+        "after": [
+          "kpis",
+          "chart",
+          "transactions",
+          "breakdown"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.00016052
+  },
+  {
+    "case_id": "analytics-compact",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "analytics",
+    "mode": "jev",
+    "status": "PASS",
+    "run_id": "1e0688ff2f7442bb88611ac941e38e40",
+    "wall_ms": 714.1,
+    "pipeline_server_ms": 712.5,
+    "spec": {
+      "app": "analytics",
+      "title": "Forma Analytics",
+      "subtitle": "A clearer view of your business.",
+      "theme": "paper",
+      "layout": "grid",
+      "sections": [
+        "kpis",
+        "chart",
+        "transactions",
+        "breakdown"
+      ],
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "data",
+      "hero": "small",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 5.8506e-05
+  },
+  {
+    "case_id": "analytics-compact",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "analytics",
+    "mode": "jev+llm",
+    "status": "PASS",
+    "run_id": "8ee479e77092407ebbfc1cab7fbcf62a",
+    "planner_run_id": "1e0688ff2f7442bb88611ac941e38e40",
+    "wall_ms": 2585.8,
+    "pipeline_server_ms": 2582.7,
+    "spec": {
+      "app": "analytics",
+      "theme": "paper",
+      "layout": "grid",
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "data",
+      "hero": "small",
+      "title": "Revenue Dashboard",
+      "subtitle": "Real-time revenue insights in a clean, paper-inspired interface.",
+      "note": "Compact grid layout with sharp corners and modern typography; KPIs, chart, transactions, and breakdown prioritized for data clarity.",
+      "sections": [
+        "kpis",
+        "chart",
+        "breakdown",
+        "transactions"
+      ]
+    },
+    "diff": [
+      {
+        "field": "title",
+        "before": "Forma Analytics",
+        "after": "Revenue Dashboard"
+      },
+      {
+        "field": "subtitle",
+        "before": "A clearer view of your business.",
+        "after": "Real-time revenue insights in a clean, paper-inspired interface."
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Compact grid layout with sharp corners and modern typography; KPIs, chart, transactions, and breakdown prioritized for data clarity."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "kpis",
+          "chart",
+          "transactions",
+          "breakdown"
+        ],
+        "after": [
+          "kpis",
+          "chart",
+          "breakdown",
+          "transactions"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.000223826
+  },
+  {
+    "case_id": "shop-showcase",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "shop",
+    "mode": "laya",
+    "status": "PASS",
+    "run_id": "26dcb67d415541c5ad5e98bc56996921",
+    "wall_ms": 92.8,
+    "pipeline_server_ms": 91.0,
+    "spec": {
+      "app": "shop",
+      "title": "Objects & Co.",
+      "subtitle": "Considered objects for everyday living.",
+      "theme": "rose",
+      "layout": "showcase",
+      "sections": [
+        "products",
+        "categories",
+        "cart",
+        "benefits"
+      ],
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "sharp",
+      "emphasis": "visual",
+      "hero": "small",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 0
+  },
+  {
+    "case_id": "shop-showcase",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "shop",
+    "mode": "laya+llm",
+    "status": "PASS",
+    "run_id": "b9e77aef36364e8eac0794d714a84c20",
+    "planner_run_id": "26dcb67d415541c5ad5e98bc56996921",
+    "wall_ms": 2250.4,
+    "pipeline_server_ms": 2246.8,
+    "spec": {
+      "app": "shop",
+      "theme": "rose",
+      "layout": "showcase",
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "title": "Objects & Co.",
+      "subtitle": "Soft-lit homewares, hand-selected for quiet moments and everyday grace.",
+      "note": "Editorial showcase with rose-hued warmth, soft corners, and generous spacing—prioritizing visual storytelling over data or actions.",
+      "sections": [
+        "products",
+        "categories",
+        "benefits",
+        "cart"
+      ]
+    },
+    "diff": [
+      {
+        "field": "corners",
+        "before": "sharp",
+        "after": "soft"
+      },
+      {
+        "field": "hero",
+        "before": "small",
+        "after": "large"
+      },
+      {
+        "field": "subtitle",
+        "before": "Considered objects for everyday living.",
+        "after": "Soft-lit homewares, hand-selected for quiet moments and everyday grace."
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Editorial showcase with rose-hued warmth, soft corners, and generous spacing—prioritizing visual storytelling over data or actions."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "products",
+          "categories",
+          "cart",
+          "benefits"
+        ],
+        "after": [
+          "products",
+          "categories",
+          "benefits",
+          "cart"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.00017104
+  },
+  {
+    "case_id": "shop-showcase",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "shop",
+    "mode": "jev",
+    "status": "PASS",
+    "run_id": "e8fe5a4444cf45f8aea02e052da696bf",
+    "wall_ms": 662.5,
+    "pipeline_server_ms": 660.8,
+    "spec": {
+      "app": "shop",
+      "title": "Objects & Co.",
+      "subtitle": "Considered objects for everyday living.",
+      "theme": "rose",
+      "layout": "showcase",
+      "sections": [
+        "categories",
+        "products",
+        "cart",
+        "benefits"
+      ],
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 5.8296e-05
+  },
+  {
+    "case_id": "shop-showcase",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "shop",
+    "mode": "jev+llm",
+    "status": "PASS",
+    "run_id": "9f4f77206e8643d9b6746ea71eba4441",
+    "planner_run_id": "e8fe5a4444cf45f8aea02e052da696bf",
+    "wall_ms": 3399.3,
+    "pipeline_server_ms": 3395.4,
+    "spec": {
+      "app": "shop",
+      "theme": "rose",
+      "layout": "showcase",
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "title": "Objects & Co.",
+      "subtitle": "Soft textures, warm tones, and quiet elegance for your home.",
+      "note": "Editorial showcase with rose-hued warmth, generous spacing, and visual-first product presentation.",
+      "sections": [
+        "categories",
+        "products",
+        "benefits",
+        "cart"
+      ]
+    },
+    "diff": [
+      {
+        "field": "subtitle",
+        "before": "Considered objects for everyday living.",
+        "after": "Soft textures, warm tones, and quiet elegance for your home."
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Editorial showcase with rose-hued warmth, generous spacing, and visual-first product presentation."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "categories",
+          "products",
+          "cart",
+          "benefits"
+        ],
+        "after": [
+          "categories",
+          "products",
+          "benefits",
+          "cart"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.000220536
+  },
+  {
+    "case_id": "board-focused",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "board",
+    "mode": "laya",
+    "status": "PASS",
+    "run_id": "f40aa70ffa6c4c2e85f76542111fdb54",
+    "wall_ms": 222.5,
+    "pipeline_server_ms": 220.4,
+    "spec": {
+      "app": "board",
+      "title": "Sprint",
+      "subtitle": "Make room for your best work.",
+      "theme": "paper",
+      "layout": "compact",
+      "sections": [
+        "filters",
+        "kanban",
+        "activity"
+      ],
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "actions",
+      "hero": "small",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 0
+  },
+  {
+    "case_id": "board-focused",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "board",
+    "mode": "laya+llm",
+    "status": "PASS",
+    "run_id": "6c58b49e8fbd407aa2cc02b6a04716ce",
+    "planner_run_id": "f40aa70ffa6c4c2e85f76542111fdb54",
+    "wall_ms": 2724.4,
+    "pipeline_server_ms": 2720.0,
+    "spec": {
+      "app": "board",
+      "theme": "paper",
+      "layout": "sidebar",
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "actions",
+      "hero": "hidden",
+      "title": "Sprint Board",
+      "subtitle": "Streamline your workflow with a clean, paper-inspired workspace.",
+      "note": "Sidebar layout with prioritized actions, sharp corners, and paper aesthetics.",
+      "sections": [
+        "overview",
+        "filters",
+        "kanban",
+        "activity"
+      ]
+    },
+    "diff": [
+      {
+        "field": "layout",
+        "before": "compact",
+        "after": "sidebar"
+      },
+      {
+        "field": "hero",
+        "before": "small",
+        "after": "hidden"
+      },
+      {
+        "field": "title",
+        "before": "Sprint",
+        "after": "Sprint Board"
+      },
+      {
+        "field": "subtitle",
+        "before": "Make room for your best work.",
+        "after": "Streamline your workflow with a clean, paper-inspired workspace."
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Sidebar layout with prioritized actions, sharp corners, and paper aesthetics."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "filters",
+          "kanban",
+          "activity"
+        ],
+        "after": [
+          "overview",
+          "filters",
+          "kanban",
+          "activity"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.00015488
+  },
+  {
+    "case_id": "board-focused",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "board",
+    "mode": "jev",
+    "status": "PASS",
+    "run_id": "ffa80acf180a464383b67d53a98dcf83",
+    "wall_ms": 637.2,
+    "pipeline_server_ms": 635.3,
+    "spec": {
+      "app": "board",
+      "title": "Sprint",
+      "subtitle": "Make room for your best work.",
+      "theme": "paper",
+      "layout": "sidebar",
+      "sections": [
+        "overview",
+        "filters",
+        "kanban",
+        "activity"
+      ],
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "actions",
+      "hero": "hidden",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 5.8128e-05
+  },
+  {
+    "case_id": "board-focused",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "board",
+    "mode": "jev+llm",
+    "status": "PASS",
+    "run_id": "7ba73efeb2da4feabb27bb24595d766a",
+    "planner_run_id": "ffa80acf180a464383b67d53a98dcf83",
+    "wall_ms": 3070.4,
+    "pipeline_server_ms": 3066.9,
+    "spec": {
+      "app": "board",
+      "theme": "paper",
+      "layout": "sidebar",
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "actions",
+      "hero": "hidden",
+      "title": "Sprint Board",
+      "subtitle": "Streamline tasks with a clean, paper-inspired workspace.",
+      "note": "Compact sidebar layout with action-first UI on a paper theme.",
+      "sections": [
+        "filters",
+        "kanban",
+        "overview",
+        "activity"
+      ]
+    },
+    "diff": [
+      {
+        "field": "title",
+        "before": "Sprint",
+        "after": "Sprint Board"
+      },
+      {
+        "field": "subtitle",
+        "before": "Make room for your best work.",
+        "after": "Streamline tasks with a clean, paper-inspired workspace."
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Compact sidebar layout with action-first UI on a paper theme."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "overview",
+          "filters",
+          "kanban",
+          "activity"
+        ],
+        "after": [
+          "filters",
+          "kanban",
+          "overview",
+          "activity"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.00021096800000000002
+  },
+  {
+    "case_id": "inbox-split",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "inbox",
+    "mode": "laya",
+    "status": "PASS",
+    "run_id": "9b7f5af9cc2343bbb0e12ceea37fd646",
+    "wall_ms": 83.0,
+    "pipeline_server_ms": 81.2,
+    "spec": {
+      "app": "inbox",
+      "title": "Relay",
+      "subtitle": "Every conversation, thoughtfully handled.",
+      "theme": "cobalt",
+      "layout": "compact",
+      "sections": [
+        "filters",
+        "detail"
+      ],
+      "density": "compact",
+      "typography": "modern",
+      "corners": "sharp",
+      "emphasis": "actions",
+      "hero": "hidden",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 0
+  },
+  {
+    "case_id": "inbox-split",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "inbox",
+    "mode": "laya+llm",
+    "status": "PASS",
+    "run_id": "9236f1c494344b3f832e0854cbd593f9",
+    "planner_run_id": "9b7f5af9cc2343bbb0e12ceea37fd646",
+    "wall_ms": 2999.3,
+    "pipeline_server_ms": 2995.6,
+    "spec": {
+      "app": "inbox",
+      "theme": "cobalt",
+      "layout": "split",
+      "density": "compact",
+      "typography": "modern",
+      "corners": "soft",
+      "emphasis": "actions",
+      "hero": "small",
+      "title": "Support Inbox",
+      "subtitle": "Streamlined support with cobalt clarity and prioritized actions.",
+      "note": "Split layout with compact density, soft corners, and a small hero emphasizing action controls.",
+      "sections": [
+        "overview",
+        "filters",
+        "messages",
+        "detail"
+      ]
+    },
+    "diff": [
+      {
+        "field": "layout",
+        "before": "compact",
+        "after": "split"
+      },
+      {
+        "field": "corners",
+        "before": "sharp",
+        "after": "soft"
+      },
+      {
+        "field": "hero",
+        "before": "hidden",
+        "after": "small"
+      },
+      {
+        "field": "title",
+        "before": "Relay",
+        "after": "Support Inbox"
+      },
+      {
+        "field": "subtitle",
+        "before": "Every conversation, thoughtfully handled.",
+        "after": "Streamlined support with cobalt clarity and prioritized actions."
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Split layout with compact density, soft corners, and a small hero emphasizing action controls."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "filters",
+          "detail"
+        ],
+        "after": [
+          "overview",
+          "filters",
+          "messages",
+          "detail"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.000156
+  },
+  {
+    "case_id": "inbox-split",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "inbox",
+    "mode": "jev",
+    "status": "PASS",
+    "run_id": "a6c12b6cdc374e66bc8014aef525a53d",
+    "wall_ms": 608.1,
+    "pipeline_server_ms": 606.3,
+    "spec": {
+      "app": "inbox",
+      "title": "Relay",
+      "subtitle": "Every conversation, thoughtfully handled.",
+      "theme": "cobalt",
+      "layout": "split",
+      "sections": [
+        "overview",
+        "filters",
+        "messages",
+        "detail"
+      ],
+      "density": "compact",
+      "typography": "modern",
+      "corners": "soft",
+      "emphasis": "actions",
+      "hero": "small",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 5.8212e-05
+  },
+  {
+    "case_id": "inbox-split",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "inbox",
+    "mode": "jev+llm",
+    "status": "PASS",
+    "run_id": "bdbc1ec2a1ad4adf8af2e1afe9705aae",
+    "planner_run_id": "a6c12b6cdc374e66bc8014aef525a53d",
+    "wall_ms": 3718.1,
+    "pipeline_server_ms": 3715.0,
+    "spec": {
+      "app": "inbox",
+      "theme": "cobalt",
+      "layout": "split",
+      "density": "compact",
+      "typography": "modern",
+      "corners": "soft",
+      "emphasis": "actions",
+      "hero": "small",
+      "title": "Support Inbox",
+      "subtitle": "Streamlined ticket management with quick actions and smart filtering.",
+      "note": "Cobalt-themed support inbox with split layout, prioritized actions, and compact UI.",
+      "sections": [
+        "overview",
+        "filters",
+        "messages",
+        "detail"
+      ]
+    },
+    "diff": [
+      {
+        "field": "title",
+        "before": "Relay",
+        "after": "Support Inbox"
+      },
+      {
+        "field": "subtitle",
+        "before": "Every conversation, thoughtfully handled.",
+        "after": "Streamlined ticket management with quick actions and smart filtering."
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Cobalt-themed support inbox with split layout, prioritized actions, and compact UI."
+      }
+    ],
+    "standalone_cost_usd": 0.000214932
+  },
+  {
+    "case_id": "landing-premium",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "landing",
+    "mode": "laya",
+    "status": "PASS",
+    "run_id": "28c6c3cb0fa143d18f565aa9ead2f9e0",
+    "wall_ms": 150.1,
+    "pipeline_server_ms": 148.2,
+    "spec": {
+      "app": "landing",
+      "title": "Flowstate",
+      "subtitle": "Less coordination. More meaningful work.",
+      "theme": "midnight",
+      "layout": "showcase",
+      "sections": [
+        "features",
+        "hero",
+        "pricing",
+        "faq",
+        "signup"
+      ],
+      "density": "compact",
+      "typography": "editorial",
+      "corners": "sharp",
+      "emphasis": "visual",
+      "hero": "small",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 0
+  },
+  {
+    "case_id": "landing-premium",
+    "repeat": 1,
+    "provider": "laya",
+    "app": "landing",
+    "mode": "laya+llm",
+    "status": "PASS",
+    "run_id": "f58ca97c20b0454f83d3ed1a3ac9bd17",
+    "planner_run_id": "28c6c3cb0fa143d18f565aa9ead2f9e0",
+    "wall_ms": 4120.0,
+    "pipeline_server_ms": 4116.6,
+    "spec": {
+      "app": "landing",
+      "theme": "midnight",
+      "layout": "showcase",
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "title": "Flowstate",
+      "subtitle": "Less coordination. More meaningful work.",
+      "note": "Midnight-themed showcase layout with large visual hero, soft corners, editorial typography, and comfortable spacing—prioritizing immersive visuals across all sections.",
+      "sections": [
+        "hero",
+        "features",
+        "pricing",
+        "faq",
+        "signup"
+      ]
+    },
+    "diff": [
+      {
+        "field": "density",
+        "before": "compact",
+        "after": "comfortable"
+      },
+      {
+        "field": "corners",
+        "before": "sharp",
+        "after": "soft"
+      },
+      {
+        "field": "hero",
+        "before": "small",
+        "after": "large"
+      },
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Midnight-themed showcase layout with large visual hero, soft corners, editorial typography, and comfortable spacing—prioritizing immersive visuals across all sections."
+      },
+      {
+        "field": "sections",
+        "before": [
+          "features",
+          "hero",
+          "pricing",
+          "faq",
+          "signup"
+        ],
+        "after": [
+          "hero",
+          "features",
+          "pricing",
+          "faq",
+          "signup"
+        ]
+      }
+    ],
+    "standalone_cost_usd": 0.00016948
+  },
+  {
+    "case_id": "landing-premium",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "landing",
+    "mode": "jev",
+    "status": "PASS",
+    "run_id": "4ff3510fb923491ea5294c5f422f4389",
+    "wall_ms": 694.0,
+    "pipeline_server_ms": 692.3,
+    "spec": {
+      "app": "landing",
+      "title": "Flowstate",
+      "subtitle": "Less coordination. More meaningful work.",
+      "theme": "midnight",
+      "layout": "showcase",
+      "sections": [
+        "hero",
+        "features",
+        "pricing",
+        "faq",
+        "signup"
+      ],
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "note": "Interactive demonstration with synthetic data."
+    },
+    "standalone_cost_usd": 6.027e-05
+  },
+  {
+    "case_id": "landing-premium",
+    "repeat": 1,
+    "provider": "jev",
+    "app": "landing",
+    "mode": "jev+llm",
+    "status": "PASS",
+    "run_id": "3e5bc554d8e0452f951feb975a26c1e8",
+    "planner_run_id": "4ff3510fb923491ea5294c5f422f4389",
+    "wall_ms": 2462.9,
+    "pipeline_server_ms": 2459.6,
+    "spec": {
+      "app": "landing",
+      "theme": "midnight",
+      "layout": "showcase",
+      "density": "comfortable",
+      "typography": "editorial",
+      "corners": "soft",
+      "emphasis": "visual",
+      "hero": "large",
+      "title": "Flowstate",
+      "subtitle": "Less coordination. More meaningful work.",
+      "note": "Midnight-themed showcase layout with large visual hero, soft corners, and editorial typography—prioritizing immersive visuals across all sections.",
+      "sections": [
+        "hero",
+        "features",
+        "pricing",
+        "faq",
+        "signup"
+      ]
+    },
+    "diff": [
+      {
+        "field": "note",
+        "before": "Interactive demonstration with synthetic data.",
+        "after": "Midnight-themed showcase layout with large visual hero, soft corners, and editorial typography—prioritizing immersive visuals across all sections."
+      }
+    ],
+    "standalone_cost_usd": 0.00022747
+  }
+]

@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "scope": "Initial development smoke: 4 live paths, one English stay request. Not performance or quality ranking.",
+  "total_api_cost_usd": 0.000388268,
+  "observations": [
+    "Laya initial plan did not follow comfortable density, soft corners, visual emphasis or large hero. LLM corrected them; raw output preserved.",
+    "Laya model load is excluded; first inference includes warm-up. Shared plans mean Jev/Laya costs are counted once each."
+  ],
+  "runs": [
+    {
+      "run_id": "327980b95245450aa063650217847ab8",
+      "provider": "jev",
+      "model": "jev-1.13.0",
+      "elapsed_ms": 648.9,
+      "stages": [
+        {
+          "name": "decision_1",
+          "elapsed_ms": 334.7
+        },
+        {
+          "name": "decision_2",
+          "elapsed_ms": 314.0
+        }
+      ],
+      "usage": {
+        "input_tokens": 1374,
+        "output_tokens": 415
+      },
+      "cost_usd": 5.7708e-05,
+      "spec": {
+        "app": "stays",
+        "title": "Elsewhere",
+        "subtitle": "Find a place worth slowing down for.",
+        "theme": "sand",
+        "layout": "editorial",
+        "sections": [
+          "filters",
+          "results",
+          "compare",
+          "saved"
+        ],
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "emphasis": "visual",
+        "hero": "large",
+        "note": "Interactive demonstration with synthetic data."
+      }
+    },
+    {
+      "run_id": "4761fb35861544bc877fdfbe68ea2a09",
+      "provider": "jev+llm",
+      "model": "qwen/qwen3-coder-next",
+      "elapsed_ms": 3193.0,
+      "stages": [
+        {
+          "name": "llm_refine",
+          "elapsed_ms": 3193.0
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 426,
+        "completion_tokens": 141,
+        "total_tokens": 567,
+        "cost": 0.00016392,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00016392,
+          "upstream_inference_prompt_cost": 5.112e-05,
+          "upstream_inference_completions_cost": 0.0001128
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "cost_usd": 0.00016392,
+      "spec": {
+        "app": "stays",
+        "theme": "sand",
+        "layout": "editorial",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "emphasis": "visual",
+        "hero": "large",
+        "title": "Elsewhere",
+        "subtitle": "Find a place worth slowing down for.",
+        "note": "Warm sand palette with serif headings, soft corners, and generous spacing; large hero image sets tone; filters, results, and comparison sections prioritize visual storytelling.",
+        "sections": [
+          "filters",
+          "results",
+          "compare"
+        ]
+      }
+    },
+    {
+      "run_id": "e3ff3a6be99f4af5b7a5e5d669e15dc9",
+      "provider": "laya",
+      "model": "convaiinnovations/laya-multilingual",
+      "elapsed_ms": 8103.5,
+      "stages": [
+        {
+          "name": "decision_1",
+          "elapsed_ms": 7194.2
+        },
+        {
+          "name": "decision_2",
+          "elapsed_ms": 906.5
+        }
+      ],
+      "usage": {
+        "input_tokens": 1101,
+        "output_tokens": 0
+      },
+      "cost_usd": 0,
+      "spec": {
+        "app": "stays",
+        "title": "Elsewhere",
+        "subtitle": "Find a place worth slowing down for.",
+        "theme": "sand",
+        "layout": "editorial",
+        "sections": [
+          "results",
+          "filters",
+          "compare"
+        ],
+        "density": "compact",
+        "typography": "editorial",
+        "corners": "sharp",
+        "emphasis": "data",
+        "hero": "small",
+        "note": "Interactive demonstration with synthetic data."
+      }
+    },
+    {
+      "run_id": "b1ea2f95599143628e7854f41ec241ec",
+      "provider": "laya+llm",
+      "model": "qwen/qwen3-coder-next",
+      "elapsed_ms": 2461.4,
+      "stages": [
+        {
+          "name": "llm_refine",
+          "elapsed_ms": 2461.3
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 422,
+        "completion_tokens": 145,
+        "total_tokens": 567,
+        "cost": 0.00016664,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00016664,
+          "upstream_inference_prompt_cost": 5.064e-05,
+          "upstream_inference_completions_cost": 0.000116
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "cost_usd": 0.00016664,
+      "spec": {
+        "app": "stays",
+        "theme": "sand",
+        "layout": "editorial",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "emphasis": "visual",
+        "hero": "large",
+        "title": "Elsewhere",
+        "subtitle": "Find a place worth slowing down for.",
+        "note": "Warm sand palette with soft corners, serif headings, and generous spacing. Large hero image anchors the editorial layout, with filters, results, and comparison sections prioritizing visual storytelling.",
+        "sections": [
+          "filters",
+          "results",
+          "compare"
+        ]
+      }
+    }
+  ],
+  "offline_security_tests": {
+    "status": "PASS",
+    "count": 13,
+    "command": "python -m unittest server.test_security -v"
+  }
+}

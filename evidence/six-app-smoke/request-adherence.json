@@ -1,0 +1,1205 @@
+{
+  "analysis_type": "post_hoc_explicit_request_to_UISpec_matching",
+  "rubric_preregistered": false,
+  "source_case_hash_verified": true,
+  "scope": "Recorded JSON only; seven exact enum matches plus one required-section-presence check per case.",
+  "rubric": {
+    "scalar_fields": [
+      "theme",
+      "layout",
+      "density",
+      "typography",
+      "corners",
+      "hero",
+      "emphasis"
+    ],
+    "normalizations": {
+      "serif headings/editorial type": "typography=editorial",
+      "modern type/modern typography": "typography=modern",
+      "photographs/visuals": "emphasis=visual",
+      "KPIs": "kpis",
+      "FAQ": "faq"
+    },
+    "sections_presence": "Pass when every explicitly requested section ID is present. Order and unrequested extra sections are not scored.",
+    "weights": "One check per scalar field and one for complete requested-section presence: 8 per case, 48 per mode. Section-ID coverage is also reported separately (24 per mode).",
+    "excluded": [
+      "section order",
+      "unrequested extras",
+      "title/subtitle/note correctness",
+      "rendered CSS appearance",
+      "responsive layout",
+      "interaction behavior",
+      "aesthetic quality"
+    ]
+  },
+  "modes": {
+    "jev": {
+      "cases": 6,
+      "api_contract_passes": 6,
+      "style_fields_matched": 42,
+      "style_fields_total": 42,
+      "all_required_sections_present_cases": 6,
+      "required_sections_present": 24,
+      "required_sections_total": 24,
+      "matched_checks": 48,
+      "total_checks": 48,
+      "all_eight_checks_matched_cases": 6,
+      "field_counts": {
+        "theme": 6,
+        "layout": 6,
+        "density": 6,
+        "typography": 6,
+        "corners": 6,
+        "hero": 6,
+        "emphasis": 6,
+        "sections_presence": 6
+      }
+    },
+    "laya": {
+      "cases": 6,
+      "api_contract_passes": 6,
+      "style_fields_matched": 27,
+      "style_fields_total": 42,
+      "all_required_sections_present_cases": 3,
+      "required_sections_present": 20,
+      "required_sections_total": 24,
+      "matched_checks": 30,
+      "total_checks": 48,
+      "all_eight_checks_matched_cases": 0,
+      "field_counts": {
+        "theme": 6,
+        "layout": 3,
+        "density": 5,
+        "typography": 6,
+        "corners": 2,
+        "hero": 1,
+        "emphasis": 4,
+        "sections_presence": 3
+      }
+    },
+    "jev+llm": {
+      "cases": 6,
+      "api_contract_passes": 6,
+      "style_fields_matched": 42,
+      "style_fields_total": 42,
+      "all_required_sections_present_cases": 6,
+      "required_sections_present": 24,
+      "required_sections_total": 24,
+      "matched_checks": 48,
+      "total_checks": 48,
+      "all_eight_checks_matched_cases": 6,
+      "field_counts": {
+        "theme": 6,
+        "layout": 6,
+        "density": 6,
+        "typography": 6,
+        "corners": 6,
+        "hero": 6,
+        "emphasis": 6,
+        "sections_presence": 6
+      }
+    },
+    "laya+llm": {
+      "cases": 6,
+      "api_contract_passes": 6,
+      "style_fields_matched": 42,
+      "style_fields_total": 42,
+      "all_required_sections_present_cases": 6,
+      "required_sections_present": 24,
+      "required_sections_total": 24,
+      "matched_checks": 48,
+      "total_checks": 48,
+      "all_eight_checks_matched_cases": 6,
+      "field_counts": {
+        "theme": 6,
+        "layout": 6,
+        "density": 6,
+        "typography": 6,
+        "corners": 6,
+        "hero": 6,
+        "emphasis": 6,
+        "sections_presence": 6
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "stays-editorial",
+      "mode": "jev",
+      "repeat": 1,
+      "run_id": "1d706b57134748b193da121fd70d7028",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "sand",
+        "layout": "editorial",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "filters",
+          "results",
+          "compare"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 3,
+      "required_sections_total": 3,
+      "missing_sections": [],
+      "extra_sections_unscored": [
+        "saved"
+      ],
+      "mismatches": {}
+    },
+    {
+      "case_id": "stays-editorial",
+      "mode": "jev+llm",
+      "repeat": 1,
+      "run_id": "d38d24fe4f0f4992aacbeb0a6d4ba67b",
+      "planner_run_id": "1d706b57134748b193da121fd70d7028",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "sand",
+        "layout": "editorial",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "filters",
+          "results",
+          "compare"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 3,
+      "required_sections_total": 3,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "stays-editorial",
+      "mode": "laya",
+      "repeat": 1,
+      "run_id": "f9a3eead17634a75933a5b1c423a8c75",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "sand",
+        "layout": "editorial",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "filters",
+          "results",
+          "compare"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": false,
+        "hero": false,
+        "emphasis": false,
+        "sections_presence": false
+      },
+      "matched_checks": 4,
+      "total_checks": 8,
+      "style_fields_matched": 4,
+      "style_fields_total": 7,
+      "required_sections_present": 2,
+      "required_sections_total": 3,
+      "missing_sections": [
+        "compare"
+      ],
+      "extra_sections_unscored": [],
+      "mismatches": {
+        "corners": {
+          "expected": "soft",
+          "actual": "sharp"
+        },
+        "hero": {
+          "expected": "large",
+          "actual": "hidden"
+        },
+        "emphasis": {
+          "expected": "visual",
+          "actual": "actions"
+        }
+      }
+    },
+    {
+      "case_id": "stays-editorial",
+      "mode": "laya+llm",
+      "repeat": 1,
+      "run_id": "56c3bb04de2f4e23a698952049ce744d",
+      "planner_run_id": "f9a3eead17634a75933a5b1c423a8c75",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "sand",
+        "layout": "editorial",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "filters",
+          "results",
+          "compare"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 3,
+      "required_sections_total": 3,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "analytics-compact",
+      "mode": "laya",
+      "repeat": 1,
+      "run_id": "ac1c3eedbe074e24aa1d5ba828300b8a",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "paper",
+        "layout": "grid",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "sharp",
+        "hero": "small",
+        "emphasis": "data",
+        "sections": [
+          "kpis",
+          "chart",
+          "transactions",
+          "breakdown"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": false,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": false,
+        "sections_presence": true
+      },
+      "matched_checks": 6,
+      "total_checks": 8,
+      "style_fields_matched": 5,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {
+        "layout": {
+          "expected": "grid",
+          "actual": "compact"
+        },
+        "emphasis": {
+          "expected": "data",
+          "actual": "visual"
+        }
+      }
+    },
+    {
+      "case_id": "analytics-compact",
+      "mode": "laya+llm",
+      "repeat": 1,
+      "run_id": "c4fa9d6b24ae4447a0a4e3728dcf9188",
+      "planner_run_id": "ac1c3eedbe074e24aa1d5ba828300b8a",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "paper",
+        "layout": "grid",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "sharp",
+        "hero": "small",
+        "emphasis": "data",
+        "sections": [
+          "kpis",
+          "chart",
+          "transactions",
+          "breakdown"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "analytics-compact",
+      "mode": "jev",
+      "repeat": 1,
+      "run_id": "1e0688ff2f7442bb88611ac941e38e40",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "paper",
+        "layout": "grid",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "sharp",
+        "hero": "small",
+        "emphasis": "data",
+        "sections": [
+          "kpis",
+          "chart",
+          "transactions",
+          "breakdown"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "analytics-compact",
+      "mode": "jev+llm",
+      "repeat": 1,
+      "run_id": "8ee479e77092407ebbfc1cab7fbcf62a",
+      "planner_run_id": "1e0688ff2f7442bb88611ac941e38e40",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "paper",
+        "layout": "grid",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "sharp",
+        "hero": "small",
+        "emphasis": "data",
+        "sections": [
+          "kpis",
+          "chart",
+          "transactions",
+          "breakdown"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "shop-showcase",
+      "mode": "laya",
+      "repeat": 1,
+      "run_id": "26dcb67d415541c5ad5e98bc56996921",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "rose",
+        "layout": "showcase",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "categories",
+          "products",
+          "cart",
+          "benefits"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": false,
+        "hero": false,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 6,
+      "total_checks": 8,
+      "style_fields_matched": 5,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {
+        "corners": {
+          "expected": "soft",
+          "actual": "sharp"
+        },
+        "hero": {
+          "expected": "large",
+          "actual": "small"
+        }
+      }
+    },
+    {
+      "case_id": "shop-showcase",
+      "mode": "laya+llm",
+      "repeat": 1,
+      "run_id": "b9e77aef36364e8eac0794d714a84c20",
+      "planner_run_id": "26dcb67d415541c5ad5e98bc56996921",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "rose",
+        "layout": "showcase",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "categories",
+          "products",
+          "cart",
+          "benefits"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "shop-showcase",
+      "mode": "jev",
+      "repeat": 1,
+      "run_id": "e8fe5a4444cf45f8aea02e052da696bf",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "rose",
+        "layout": "showcase",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "categories",
+          "products",
+          "cart",
+          "benefits"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "shop-showcase",
+      "mode": "jev+llm",
+      "repeat": 1,
+      "run_id": "9f4f77206e8643d9b6746ea71eba4441",
+      "planner_run_id": "e8fe5a4444cf45f8aea02e052da696bf",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "rose",
+        "layout": "showcase",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "categories",
+          "products",
+          "cart",
+          "benefits"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "board-focused",
+      "mode": "laya",
+      "repeat": 1,
+      "run_id": "f40aa70ffa6c4c2e85f76542111fdb54",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "paper",
+        "layout": "sidebar",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "sharp",
+        "hero": "hidden",
+        "emphasis": "actions",
+        "sections": [
+          "overview",
+          "filters",
+          "kanban",
+          "activity"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": false,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": false,
+        "emphasis": true,
+        "sections_presence": false
+      },
+      "matched_checks": 5,
+      "total_checks": 8,
+      "style_fields_matched": 5,
+      "style_fields_total": 7,
+      "required_sections_present": 3,
+      "required_sections_total": 4,
+      "missing_sections": [
+        "overview"
+      ],
+      "extra_sections_unscored": [],
+      "mismatches": {
+        "layout": {
+          "expected": "sidebar",
+          "actual": "compact"
+        },
+        "hero": {
+          "expected": "hidden",
+          "actual": "small"
+        }
+      }
+    },
+    {
+      "case_id": "board-focused",
+      "mode": "laya+llm",
+      "repeat": 1,
+      "run_id": "6c58b49e8fbd407aa2cc02b6a04716ce",
+      "planner_run_id": "f40aa70ffa6c4c2e85f76542111fdb54",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "paper",
+        "layout": "sidebar",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "sharp",
+        "hero": "hidden",
+        "emphasis": "actions",
+        "sections": [
+          "overview",
+          "filters",
+          "kanban",
+          "activity"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "board-focused",
+      "mode": "jev",
+      "repeat": 1,
+      "run_id": "ffa80acf180a464383b67d53a98dcf83",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "paper",
+        "layout": "sidebar",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "sharp",
+        "hero": "hidden",
+        "emphasis": "actions",
+        "sections": [
+          "overview",
+          "filters",
+          "kanban",
+          "activity"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "board-focused",
+      "mode": "jev+llm",
+      "repeat": 1,
+      "run_id": "7ba73efeb2da4feabb27bb24595d766a",
+      "planner_run_id": "ffa80acf180a464383b67d53a98dcf83",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "paper",
+        "layout": "sidebar",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "sharp",
+        "hero": "hidden",
+        "emphasis": "actions",
+        "sections": [
+          "overview",
+          "filters",
+          "kanban",
+          "activity"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "inbox-split",
+      "mode": "laya",
+      "repeat": 1,
+      "run_id": "9b7f5af9cc2343bbb0e12ceea37fd646",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "cobalt",
+        "layout": "split",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "soft",
+        "hero": "small",
+        "emphasis": "actions",
+        "sections": [
+          "overview",
+          "filters",
+          "messages",
+          "detail"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": false,
+        "density": true,
+        "typography": true,
+        "corners": false,
+        "hero": false,
+        "emphasis": true,
+        "sections_presence": false
+      },
+      "matched_checks": 4,
+      "total_checks": 8,
+      "style_fields_matched": 4,
+      "style_fields_total": 7,
+      "required_sections_present": 2,
+      "required_sections_total": 4,
+      "missing_sections": [
+        "overview",
+        "messages"
+      ],
+      "extra_sections_unscored": [],
+      "mismatches": {
+        "layout": {
+          "expected": "split",
+          "actual": "compact"
+        },
+        "corners": {
+          "expected": "soft",
+          "actual": "sharp"
+        },
+        "hero": {
+          "expected": "small",
+          "actual": "hidden"
+        }
+      }
+    },
+    {
+      "case_id": "inbox-split",
+      "mode": "laya+llm",
+      "repeat": 1,
+      "run_id": "9236f1c494344b3f832e0854cbd593f9",
+      "planner_run_id": "9b7f5af9cc2343bbb0e12ceea37fd646",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "cobalt",
+        "layout": "split",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "soft",
+        "hero": "small",
+        "emphasis": "actions",
+        "sections": [
+          "overview",
+          "filters",
+          "messages",
+          "detail"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "inbox-split",
+      "mode": "jev",
+      "repeat": 1,
+      "run_id": "a6c12b6cdc374e66bc8014aef525a53d",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "cobalt",
+        "layout": "split",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "soft",
+        "hero": "small",
+        "emphasis": "actions",
+        "sections": [
+          "overview",
+          "filters",
+          "messages",
+          "detail"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "inbox-split",
+      "mode": "jev+llm",
+      "repeat": 1,
+      "run_id": "bdbc1ec2a1ad4adf8af2e1afe9705aae",
+      "planner_run_id": "a6c12b6cdc374e66bc8014aef525a53d",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "cobalt",
+        "layout": "split",
+        "density": "compact",
+        "typography": "modern",
+        "corners": "soft",
+        "hero": "small",
+        "emphasis": "actions",
+        "sections": [
+          "overview",
+          "filters",
+          "messages",
+          "detail"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 4,
+      "required_sections_total": 4,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "landing-premium",
+      "mode": "laya",
+      "repeat": 1,
+      "run_id": "28c6c3cb0fa143d18f565aa9ead2f9e0",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "midnight",
+        "layout": "showcase",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "hero",
+          "features",
+          "pricing",
+          "faq",
+          "signup"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": false,
+        "typography": true,
+        "corners": false,
+        "hero": false,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 5,
+      "total_checks": 8,
+      "style_fields_matched": 4,
+      "style_fields_total": 7,
+      "required_sections_present": 5,
+      "required_sections_total": 5,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {
+        "density": {
+          "expected": "comfortable",
+          "actual": "compact"
+        },
+        "corners": {
+          "expected": "soft",
+          "actual": "sharp"
+        },
+        "hero": {
+          "expected": "large",
+          "actual": "small"
+        }
+      }
+    },
+    {
+      "case_id": "landing-premium",
+      "mode": "laya+llm",
+      "repeat": 1,
+      "run_id": "f58ca97c20b0454f83d3ed1a3ac9bd17",
+      "planner_run_id": "28c6c3cb0fa143d18f565aa9ead2f9e0",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "midnight",
+        "layout": "showcase",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "hero",
+          "features",
+          "pricing",
+          "faq",
+          "signup"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 5,
+      "required_sections_total": 5,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "landing-premium",
+      "mode": "jev",
+      "repeat": 1,
+      "run_id": "4ff3510fb923491ea5294c5f422f4389",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "midnight",
+        "layout": "showcase",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "hero",
+          "features",
+          "pricing",
+          "faq",
+          "signup"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 5,
+      "required_sections_total": 5,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    },
+    {
+      "case_id": "landing-premium",
+      "mode": "jev+llm",
+      "repeat": 1,
+      "run_id": "3e5bc554d8e0452f951feb975a26c1e8",
+      "planner_run_id": "4ff3510fb923491ea5294c5f422f4389",
+      "api_contract_status": "PASS",
+      "expected": {
+        "theme": "midnight",
+        "layout": "showcase",
+        "density": "comfortable",
+        "typography": "editorial",
+        "corners": "soft",
+        "hero": "large",
+        "emphasis": "visual",
+        "sections": [
+          "hero",
+          "features",
+          "pricing",
+          "faq",
+          "signup"
+        ]
+      },
+      "checks": {
+        "theme": true,
+        "layout": true,
+        "density": true,
+        "typography": true,
+        "corners": true,
+        "hero": true,
+        "emphasis": true,
+        "sections_presence": true
+      },
+      "matched_checks": 8,
+      "total_checks": 8,
+      "style_fields_matched": 7,
+      "style_fields_total": 7,
+      "required_sections_present": 5,
+      "required_sections_total": 5,
+      "missing_sections": [],
+      "extra_sections_unscored": [],
+      "mismatches": {}
+    }
+  ],
+  "aesthetic_quality": "NOT_RUN",
+  "browser_interaction_success": "NOT_RUN",
+  "source_files_sha256": {
+    "manifest.json": "ef8d6774e583c9508f163d5692021b5d40e6c27c4745a4921e66edde255fcb69",
+    "slots.json": "bad3dc7ac7362ad739fd2349691389e68cded4f219167d4c8698b4306b188f2b",
+    "summary.json": "c4bf8bf54d80c3451da10edc9786759d073d2443f2eb013faf2ff229131f1d0c"
+  }
+}

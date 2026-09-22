@@ -1,0 +1,139 @@
+{
+  "created_at": "20260922T124354Z",
+  "cases": [
+    {
+      "id": "stays-editorial",
+      "app": "stays",
+      "prompt": "Create a stay discovery interface with a warm sand theme, editorial layout, comfortable spacing, serif headings, soft corners and a large hero. Prioritize photographs. Include filters, results and compare."
+    },
+    {
+      "id": "analytics-compact",
+      "app": "analytics",
+      "prompt": "Create a revenue dashboard using a paper theme, compact density, grid layout, modern typography, sharp corners and a small hero. Prioritize data. Include KPIs, chart, transactions and breakdown."
+    },
+    {
+      "id": "shop-showcase",
+      "app": "shop",
+      "prompt": "Create an independent homeware shop with a rose theme, showcase layout, comfortable spacing, editorial type, soft corners and a large hero. Prioritize visuals. Include categories, products, cart and benefits."
+    },
+    {
+      "id": "board-focused",
+      "app": "board",
+      "prompt": "Create a team workspace using a paper theme, sidebar layout, compact density, modern type, sharp corners and a hidden hero. Prioritize actions. Include overview, filters, kanban and activity."
+    },
+    {
+      "id": "inbox-split",
+      "app": "inbox",
+      "prompt": "Create a support inbox with a cobalt theme, split layout, compact density, modern typography, soft corners and a small hero. Prioritize actions. Include overview, filters, messages and detail."
+    },
+    {
+      "id": "landing-premium",
+      "app": "landing",
+      "prompt": "Create a premium SaaS product landing page with a midnight theme, showcase layout, comfortable spacing, editorial type, soft corners and a large hero. Prioritize visuals. Include hero, features, pricing, FAQ and signup."
+    }
+  ],
+  "cases_sha256": "791f7f0a239908f18d70e01cda4f1f6346edc35b2694d4da86220a99049829da",
+  "order": [
+    {
+      "case_id": "stays-editorial",
+      "repeat": 1,
+      "provider": "jev"
+    },
+    {
+      "case_id": "stays-editorial",
+      "repeat": 1,
+      "provider": "laya"
+    },
+    {
+      "case_id": "analytics-compact",
+      "repeat": 1,
+      "provider": "laya"
+    },
+    {
+      "case_id": "analytics-compact",
+      "repeat": 1,
+      "provider": "jev"
+    },
+    {
+      "case_id": "shop-showcase",
+      "repeat": 1,
+      "provider": "laya"
+    },
+    {
+      "case_id": "shop-showcase",
+      "repeat": 1,
+      "provider": "jev"
+    },
+    {
+      "case_id": "board-focused",
+      "repeat": 1,
+      "provider": "laya"
+    },
+    {
+      "case_id": "board-focused",
+      "repeat": 1,
+      "provider": "jev"
+    },
+    {
+      "case_id": "inbox-split",
+      "repeat": 1,
+      "provider": "laya"
+    },
+    {
+      "case_id": "inbox-split",
+      "repeat": 1,
+      "provider": "jev"
+    },
+    {
+      "case_id": "landing-premium",
+      "repeat": 1,
+      "provider": "laya"
+    },
+    {
+      "case_id": "landing-premium",
+      "repeat": 1,
+      "provider": "jev"
+    }
+  ],
+  "seed": 20260922,
+  "repeats": 1,
+  "expected_result_slots": 24,
+  "provider_health": {
+    "jev": {
+      "configured": true,
+      "model": "jev-1.13.0"
+    },
+    "laya": {
+      "available": true,
+      "ready": true,
+      "model": "convaiinnovations/laya-multilingual",
+      "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+      "device": "mps",
+      "dtype": "torch.float32",
+      "runtime_version": "0.3.4",
+      "torch_version": "2.14.0",
+      "transformers_version": "5.17.0",
+      "max_len": 1024,
+      "head_max_len": 256,
+      "load_ms": 18364.0
+    },
+    "llm": {
+      "configured": true,
+      "model": "qwen/qwen3-coder-next",
+      "provider": "parasail/bf16"
+    }
+  },
+  "budget_usd": 0.25,
+  "protocol": "Sequential pipelines; a valid plan is shared between only and +LLM. No automatic retry. All result slots retained.",
+  "scope": "API contract and timing only. No human aesthetic evaluation or browser interaction test.",
+  "source_sha256": {
+    "prepare_laya.py": "016c15285c2dd165d1d99490d8d0493fa8c3ea48d02cad6cbbad1ed866121000",
+    "test_security.py": "441802a3f871d67470d593c499e4e13ab6cf7e765b2ec9401717e76f89a3ad38",
+    "benchmark.py": "fce75e10beac9a9b36a458cbd65243dc2210cf9ce6704346d890de430925dbbd",
+    "questions.py": "c7b29535ff48ab16da2ebb16ce683b404349c74c90a943a07a130d687ad63afc",
+    "__init__.py": "962c7eb4f359d7b2edbec51b66a372e19094be0506b9c794df53865cc67cd27e",
+    "providers.py": "dd0f1ec84e4beaf6f456541ef11c2f1c2a4bb09d69f2c4c1c28059df18a56bce",
+    "app.py": "97a92b29450d616c4d65a39359b1d08d7f7720e60268f3a7bb42f1d622eb49dd",
+    "schema.py": "578e896170d0b0e4b5713a66506a40508135af2fb56b9c75df79966fcc0598c0"
+  }
+}

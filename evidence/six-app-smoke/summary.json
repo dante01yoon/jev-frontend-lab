@@ -1,0 +1,64 @@
+{
+  "status": "COMPLETE",
+  "expected_slots": 24,
+  "recorded_slots": 24,
+  "modes": {
+    "jev": {
+      "attempts": 6,
+      "valid_contract_results": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pipeline_server_ms": {
+        "median": 648.0,
+        "min": 606.3,
+        "max": 712.5
+      },
+      "aesthetic_quality": "NOT_RUN",
+      "interaction_success": "NOT_RUN"
+    },
+    "jev+llm": {
+      "attempts": 6,
+      "valid_contract_results": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pipeline_server_ms": {
+        "median": 3075.7,
+        "min": 2459.6,
+        "max": 3715.0
+      },
+      "aesthetic_quality": "NOT_RUN",
+      "interaction_success": "NOT_RUN"
+    },
+    "laya": {
+      "attempts": 6,
+      "valid_contract_results": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pipeline_server_ms": {
+        "median": 159.3,
+        "min": 81.2,
+        "max": 1074.9
+      },
+      "aesthetic_quality": "NOT_RUN",
+      "interaction_success": "NOT_RUN"
+    },
+    "laya+llm": {
+      "attempts": 6,
+      "valid_contract_results": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pipeline_server_ms": {
+        "median": 2789.4,
+        "min": 2180.3,
+        "max": 4116.6
+      },
+      "aesthetic_quality": "NOT_RUN",
+      "interaction_success": "NOT_RUN"
+    }
+  },
+  "known_batch_cost_usd": 0.002291776,
+  "attempts_with_unknown_cost": 0,
+  "cost_note": "Each shared plan counted once. Jev uses a rate estimate; local hardware excluded. Mode standalone costs must not be summed as actual batch charges.",
+  "quality_and_interactions": "NOT_RUN",
+  "performance_limit": "Sequential API sampler only. Browser render excluded. Cold inference may be present; inspect raw timings. No ranking claim."
+}
