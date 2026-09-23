@@ -4,6 +4,18 @@ Six working frontend demos. Four real model pipelines. One shared component syst
 
 Compare **Jev only**, **Laya only**, **Jev + LLM**, and **Laya + LLM** across stay discovery, revenue analytics, a homeware shop, a team board, a support inbox, and a SaaS landing page.
 
+## Screenshots
+
+These are cropped frames from the six real browser recordings. Each image shows the four comparison panels for one app. The crop removes only the recording title and footer overlays; all demo data is synthetic. See the [source manifest](docs/screenshots/sources.json) for the original clip hashes, frame offsets and screenshot hashes.
+
+| **Stay discovery** | **Revenue analytics** |
+|:--|:--|
+| ![Stay discovery in Jev only, Laya only, Jev plus LLM, and Laya plus LLM](docs/screenshots/stay-discovery-4-modes.png) | ![Revenue dashboard in all four modes](docs/screenshots/revenue-dashboard-4-modes.png) |
+| **Homeware shop** | **Team workspace** |
+| ![Homeware shop in all four modes](docs/screenshots/homeware-shop-4-modes.png) | ![Team workspace in all four modes](docs/screenshots/team-workspace-4-modes.png) |
+| **Support inbox** | **Product landing page** |
+| ![Support inbox in all four modes](docs/screenshots/support-inbox-4-modes.png) | ![Product landing page in all four modes](docs/screenshots/product-landing-4-modes.png) |
+
 ## What this experiment measures
 
 Jev and Laya make two rounds of typed design decisions. A deterministic compiler creates a validated UI specification, and React renders a prepared component catalogue. The optional fixed LLM improves that specification. The inspector exposes original responses, usage, changed fields, and an exportable specification.

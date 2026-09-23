@@ -1,0 +1,95 @@
+{
+  "generated_from": "2026-09-22 real-browser recording stills",
+  "format": "PNG",
+  "frames": [
+    {
+      "file": "stay-discovery-4-modes.png",
+      "sha256": "06e2547f5e9fac8e782a16f155ef333882a84eb8c4e366633111854bde234a05",
+      "size_bytes": 420610,
+      "dimensions": [
+        1920,
+        936
+      ],
+      "source_file": "01-stay-discovery.clean.mp4",
+      "source_sha256": "62f892e8df342cebf3b41d60f96639aa32e26914017eedb29f871269738ba9f7",
+      "frame_time_seconds": 70,
+      "crop": "x=0, y=64, width=1920, height=936; removes recording title/footer overlays",
+      "content": "Four-mode comparison of a synthetic app; visible provider results and timings are captured from the real browser recording."
+    },
+    {
+      "file": "revenue-dashboard-4-modes.png",
+      "sha256": "e335860f151d550492eb70d8d0e5255c05ff196bf646cb012b0de29c4ee33900",
+      "size_bytes": 408643,
+      "dimensions": [
+        1920,
+        936
+      ],
+      "source_file": "02-revenue-dashboard.clean.mp4",
+      "source_sha256": "4947f117843262957ab4716af0d4d07d8868a92efe284ba37e525612d9077e11",
+      "frame_time_seconds": 20,
+      "crop": "x=0, y=64, width=1920, height=936; removes recording title/footer overlays",
+      "content": "Four-mode comparison of a synthetic app; visible provider results and timings are captured from the real browser recording."
+    },
+    {
+      "file": "homeware-shop-4-modes.png",
+      "sha256": "f3f6a22268fd2389cc253f334292a456016ac1df16865543f69141a0fbe91496",
+      "size_bytes": 362178,
+      "dimensions": [
+        1920,
+        936
+      ],
+      "source_file": "03-studio-storefront.clean.mp4",
+      "source_sha256": "133d288e69335183a8fdb13b16bef646c01cf3ce5f73a9ed1584895fa8d48c91",
+      "frame_time_seconds": 20,
+      "crop": "x=0, y=64, width=1920, height=936; removes recording title/footer overlays",
+      "content": "Four-mode comparison of a synthetic app; visible provider results and timings are captured from the real browser recording."
+    },
+    {
+      "file": "team-workspace-4-modes.png",
+      "sha256": "450929c6468fff772511c64a8982ace77b453ec252b2fd8a552e168d873101f2",
+      "size_bytes": 407139,
+      "dimensions": [
+        1920,
+        936
+      ],
+      "source_file": "04-team-workspace.clean.mp4",
+      "source_sha256": "14b3e57049caffb5a7c2a96d598c5d28a63614b6b8a2156beaaf78fa5838e275",
+      "frame_time_seconds": 30,
+      "crop": "x=0, y=64, width=1920, height=936; removes recording title/footer overlays",
+      "content": "Four-mode comparison of a synthetic app; visible provider results and timings are captured from the real browser recording."
+    },
+    {
+      "file": "support-inbox-4-modes.png",
+      "sha256": "d717ccd21af033b0d50bdb4ca52a3459d28bb3e49c7a6891a62fe837217bd84b",
+      "size_bytes": 389654,
+      "dimensions": [
+        1920,
+        936
+      ],
+      "source_file": "05-support-inbox.clean.mp4",
+      "source_sha256": "251c3d048ad443736c39fbae04a6316a9cec208cecfc96d30ca28a78f3a32c95",
+      "frame_time_seconds": 20,
+      "crop": "x=0, y=64, width=1920, height=936; removes recording title/footer overlays",
+      "content": "Four-mode comparison of a synthetic app; visible provider results and timings are captured from the real browser recording."
+    },
+    {
+      "file": "product-landing-4-modes.png",
+      "sha256": "3b1df79af4c706aa59f39822850902821191ab4e94b87aa2b9a2dfed30a4859b",
+      "size_bytes": 379302,
+      "dimensions": [
+        1920,
+        936
+      ],
+      "source_file": "06-product-landing.clean.mp4",
+      "source_sha256": "8dc55126df976e1e384494e049ab5e2a5e444ce36073e97ceeab59d3ff3c5f43",
+      "frame_time_seconds": 20,
+      "crop": "x=0, y=64, width=1920, height=936; removes recording title/footer overlays",
+      "content": "Four-mode comparison of a synthetic app; visible provider results and timings are captured from the real browser recording."
+    }
+  ],
+  "limits": [
+    "Crops remove only top and bottom recording overlay strips.",
+    "Screenshots are one frame per app, not a full interaction or quality review.",
+    "Synthetic demo fixtures are shown."
+  ]
+}

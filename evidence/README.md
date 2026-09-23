@@ -106,4 +106,4 @@ Capture timestamps have whole-second precision. Per-run offsets and derived fini
 
 ## Browser and media checks
 
-[Manual browser interactions](browser-interactions.json) are separate from API contract scoring. [Media verification](media-verification.json) records local recording hashes, full decoding, sampled visual checks, exact join checks, and the separately scoped normal-speed playback result. The raw clips and combined silent MP4 remain local, outside this Git repository.
+[Manual browser interactions](browser-interactions.json) are separate from API contract scoring. [Media verification](media-verification.json) records local recording hashes, full decoding, sampled visual checks, exact join checks, and the separately scoped normal-speed playback result. Six cropped stills from those recordings appear in the README gallery; their source clip hashes, frame offsets, crop, and image hashes are listed in the [screenshot manifest](../docs/screenshots/sources.json). The raw clips and combined silent MP4 remain local, outside this Git repository.
